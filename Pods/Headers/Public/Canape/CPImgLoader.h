@@ -1,0 +1,1 @@
+../../../Canape/Canape/Classes/Loader/CPImgLoader.h

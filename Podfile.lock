@@ -1,0 +1,52 @@
+PODS:
+  - Canape (0.1.0):
+    - Canape/ActionSheet (= 0.1.0)
+    - Canape/Alert (= 0.1.0)
+    - Canape/BaseController (= 0.1.0)
+    - Canape/Category (= 0.1.0)
+    - Canape/Combo (= 0.1.0)
+    - Canape/Common (= 0.1.0)
+    - Canape/Encryption (= 0.1.0)
+    - Canape/Hybrid (= 0.1.0)
+    - Canape/Loader (= 0.1.0)
+    - Canape/PlistManager (= 0.1.0)
+    - Canape/SelectableButton (= 0.1.0)
+    - Canape/StackView (= 0.1.0)
+    - Canape/Toast (= 0.1.0)
+    - Canape/Token (= 0.1.0)
+    - Canape/Utils (= 0.1.0)
+    - Canape/Validation (= 0.1.0)
+    - Canape/ViewPager (= 0.1.0)
+  - Canape/ActionSheet (0.1.0):
+    - Canape/Utils
+  - Canape/Alert (0.1.0):
+    - Canape/Utils
+  - Canape/BaseController (0.1.0)
+  - Canape/Category (0.1.0)
+  - Canape/Combo (0.1.0)
+  - Canape/Common (0.1.0):
+    - Canape/Category
+  - Canape/Encryption (0.1.0)
+  - Canape/Hybrid (0.1.0):
+    - Canape/BaseController
+  - Canape/Loader (0.1.0)
+  - Canape/PlistManager (0.1.0):
+    - Canape/Encryption
+  - Canape/SelectableButton (0.1.0)
+  - Canape/StackView (0.1.0)
+  - Canape/Toast (0.1.0):
+    - Canape/Common
+  - Canape/Token (0.1.0)
+  - Canape/Utils (0.1.0):
+    - Canape/Common
+  - Canape/Validation (0.1.0):
+    - Canape/Combo
+  - Canape/ViewPager (0.1.0)
+
+DEPENDENCIES:
+  - Canape
+
+SPEC CHECKSUMS:
+  Canape: a0c5199420dc27a3dd03a3105786924e5e691419
+
+COCOAPODS: 0.38.2

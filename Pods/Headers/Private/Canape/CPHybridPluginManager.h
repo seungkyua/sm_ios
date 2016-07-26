@@ -1,0 +1,1 @@
+../../../Canape/Canape/Classes/Hybrid/CPHybridPluginManager.h

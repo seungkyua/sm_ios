@@ -1,0 +1,1 @@
+../../../Canape/Canape/Classes/ViewPager/CPViewPager.h

@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		338164E01D4726D20025752C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 338164DF1D4726D20025752C /* main.m */; };
+		338164E31D4726D20025752C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 338164E21D4726D20025752C /* AppDelegate.m */; };
+		338164E91D4726D20025752C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338164E71D4726D20025752C /* Main.storyboard */; };
+		338164EB1D4726D20025752C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338164EA1D4726D20025752C /* Assets.xcassets */; };
+		338164EE1D4726D20025752C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338164EC1D4726D20025752C /* LaunchScreen.storyboard */; };
+		338164FB1D4729360025752C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338164FA1D4729360025752C /* HomeViewController.m */; };
+		338164FE1D47295E0025752C /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338164FD1D47295E0025752C /* IntroViewController.m */; };
+		338165041D4729D50025752C /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338165031D4729D50025752C /* ProfileViewController.m */; };
+		338165071D4729EC0025752C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338165061D4729EC0025752C /* LoginViewController.m */; };
+		3381650D1D472BB10025752C /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3381650C1D472BB10025752C /* Setting.plist */; };
+		3381650F1D472BBE0025752C /* SSO.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3381650E1D472BBD0025752C /* SSO.plist */; };
+		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0ED4A85756E406DA99B9261B /* Pods-Soulmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.debug.xcconfig"; sourceTree = "<group>"; };
+		338164DB1D4726D20025752C /* Soulmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338164DF1D4726D20025752C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		338164E11D4726D20025752C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		338164E21D4726D20025752C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		338164E81D4726D20025752C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		338164EA1D4726D20025752C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338164ED1D4726D20025752C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		338164EF1D4726D20025752C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338164F91D4729360025752C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Classes/Home/HomeViewController.h; sourceTree = "<group>"; };
+		338164FA1D4729360025752C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Classes/Home/HomeViewController.m; sourceTree = "<group>"; };
+		338164FC1D47295E0025752C /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroViewController.h; path = Classes/Home/IntroViewController.h; sourceTree = "<group>"; };
+		338164FD1D47295E0025752C /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroViewController.m; path = Classes/Home/IntroViewController.m; sourceTree = "<group>"; };
+		338165021D4729D50025752C /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Classes/Account/Profile/ProfileViewController.h; sourceTree = "<group>"; };
+		338165031D4729D50025752C /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Classes/Account/Profile/ProfileViewController.m; sourceTree = "<group>"; };
+		338165051D4729EC0025752C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Account/Login/LoginViewController.h; sourceTree = "<group>"; };
+		338165061D4729EC0025752C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Account/Login/LoginViewController.m; sourceTree = "<group>"; };
+		3381650C1D472BB10025752C /* Setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Setting.plist; sourceTree = "<group>"; };
+		3381650E1D472BBD0025752C /* SSO.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SSO.plist; sourceTree = "<group>"; };
+		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
+		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		338164D81D4726D20025752C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		338164D21D4726D10025752C = {
+			isa = PBXGroup;
+			children = (
+				338164DD1D4726D20025752C /* Soulmate */,
+				338164DC1D4726D20025752C /* Products */,
+				3B45ABD63C64DADF6DDE7D2D /* Pods */,
+				699778201B508677D136EA22 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		338164DC1D4726D20025752C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338164DB1D4726D20025752C /* Soulmate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338164DD1D4726D20025752C /* Soulmate */ = {
+			isa = PBXGroup;
+			children = (
+				338164F51D4728C80025752C /* Classes */,
+				338164E11D4726D20025752C /* AppDelegate.h */,
+				338164E21D4726D20025752C /* AppDelegate.m */,
+				338164E71D4726D20025752C /* Main.storyboard */,
+				338164EA1D4726D20025752C /* Assets.xcassets */,
+				338164EC1D4726D20025752C /* LaunchScreen.storyboard */,
+				338164EF1D4726D20025752C /* Info.plist */,
+				338164DE1D4726D20025752C /* Supporting Files */,
+			);
+			path = Soulmate;
+			sourceTree = "<group>";
+		};
+		338164DE1D4726D20025752C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				338164DF1D4726D20025752C /* main.m */,
+				3381650C1D472BB10025752C /* Setting.plist */,
+				3381650E1D472BBD0025752C /* SSO.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		338164F51D4728C80025752C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				338164F81D4728E60025752C /* Home */,
+				338164F71D4728DE0025752C /* Common */,
+				338164F61D4728D20025752C /* Account */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		338164F61D4728D20025752C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				338165011D4729840025752C /* Profile */,
+				338165001D47297C0025752C /* Join */,
+				338164FF1D4729760025752C /* Login */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		338164F71D4728DE0025752C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		338164F81D4728E60025752C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				338164F91D4729360025752C /* HomeViewController.h */,
+				338164FA1D4729360025752C /* HomeViewController.m */,
+				338164FC1D47295E0025752C /* IntroViewController.h */,
+				338164FD1D47295E0025752C /* IntroViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		338164FF1D4729760025752C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				338165051D4729EC0025752C /* LoginViewController.h */,
+				338165061D4729EC0025752C /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		338165001D47297C0025752C /* Join */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Join;
+			sourceTree = "<group>";
+		};
+		338165011D4729840025752C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				338165021D4729D50025752C /* ProfileViewController.h */,
+				338165031D4729D50025752C /* ProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		3B45ABD63C64DADF6DDE7D2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ED4A85756E406DA99B9261B /* Pods-Soulmate.debug.xcconfig */,
+				90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		699778201B508677D136EA22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		338164DA1D4726D20025752C /* Soulmate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338164F21D4726D20025752C /* Build configuration list for PBXNativeTarget "Soulmate" */;
+			buildPhases = (
+				BDD0B5A6BCF616E20CA8F7DB /* Check Pods Manifest.lock */,
+				338164D71D4726D20025752C /* Sources */,
+				338164D81D4726D20025752C /* Frameworks */,
+				338164D91D4726D20025752C /* Resources */,
+				786488AA9C4973F0976B161C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soulmate;
+			productName = Soulmate;
+			productReference = 338164DB1D4726D20025752C /* Soulmate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338164D31D4726D10025752C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = bliex;
+				TargetAttributes = {
+					338164DA1D4726D20025752C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 338164D61D4726D10025752C /* Build configuration list for PBXProject "Soulmate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 338164D21D4726D10025752C;
+			productRefGroup = 338164DC1D4726D20025752C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				338164DA1D4726D20025752C /* Soulmate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		338164D91D4726D20025752C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338164EE1D4726D20025752C /* LaunchScreen.storyboard in Resources */,
+				3381650F1D472BBE0025752C /* SSO.plist in Resources */,
+				3381650D1D472BB10025752C /* Setting.plist in Resources */,
+				338164EB1D4726D20025752C /* Assets.xcassets in Resources */,
+				338164E91D4726D20025752C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		786488AA9C4973F0976B161C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDD0B5A6BCF616E20CA8F7DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338164D71D4726D20025752C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338164E31D4726D20025752C /* AppDelegate.m in Sources */,
+				338164E01D4726D20025752C /* main.m in Sources */,
+				338164FB1D4729360025752C /* HomeViewController.m in Sources */,
+				338165071D4729EC0025752C /* LoginViewController.m in Sources */,
+				338165041D4729D50025752C /* ProfileViewController.m in Sources */,
+				338164FE1D47295E0025752C /* IntroViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		338164E71D4726D20025752C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338164E81D4726D20025752C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		338164EC1D4726D20025752C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338164ED1D4726D20025752C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		338164F01D4726D20025752C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		338164F11D4726D20025752C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		338164F31D4726D20025752C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED4A85756E406DA99B9261B /* Pods-Soulmate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Soulmate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bliex.Soulmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		338164F41D4726D20025752C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Soulmate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bliex.Soulmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338164D61D4726D10025752C /* Build configuration list for PBXProject "Soulmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338164F01D4726D20025752C /* Debug */,
+				338164F11D4726D20025752C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338164F21D4726D20025752C /* Build configuration list for PBXNativeTarget "Soulmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338164F31D4726D20025752C /* Debug */,
+				338164F41D4726D20025752C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 338164D31D4726D10025752C /* Project object */;
+}

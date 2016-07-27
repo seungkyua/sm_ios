@@ -138,36 +138,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxW-n8-r8k">
-                                <rect key="frame" x="56" y="499" width="299" height="30"/>
-                                <state key="normal" title="여"/>
-                                <connections>
-                                    <action selector="touchSex:" destination="uXt-4Y-DF8" eventType="touchUpInside" id="n9D-WP-ZZX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-VW-wbn">
-                                <rect key="frame" x="85" y="528" width="270" height="30"/>
-                                <state key="normal" title="1994년 7월 18일"/>
-                                <connections>
-                                    <action selector="touchBirth:" destination="uXt-4Y-DF8" eventType="touchUpInside" id="N0p-UY-ffU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-7f-xGP">
-                                <rect key="frame" x="71" y="556" width="284" height="30"/>
-                                <state key="normal" title="서울"/>
-                                <connections>
-                                    <action selector="touchAddr:" destination="uXt-4Y-DF8" eventType="touchUpInside" id="WOH-0B-PR3"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlt-3t-MH0" customClass="Combo">
+                                <rect key="frame" x="56" y="503" width="299" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1984년 5월 20일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-BC-LOQ" customClass="Combo">
+                                <rect key="frame" x="85" y="532" width="271" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buc-wr-g7O" customClass="Combo">
+                                <rect key="frame" x="70" y="560" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2W-t1-fFz" customClass="Combo">
+                                <rect key="frame" x="216" y="560" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="mnf-4c-jGw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="btnAddr" destination="bKc-7f-xGP" id="K5R-wB-JpC"/>
-                        <outlet property="btnBirth" destination="vGS-VW-wbn" id="d2F-gy-gd5"/>
-                        <outlet property="btnSex" destination="TxW-n8-r8k" id="Bjh-S5-r1N"/>
+                        <outlet property="comboAddr1" destination="buc-wr-g7O" id="3DO-qm-paQ"/>
+                        <outlet property="comboAddr2" destination="z2W-t1-fFz" id="BJr-lF-dOu"/>
+                        <outlet property="comboBirth" destination="0fc-BC-LOQ" id="Hbq-Cr-THj"/>
+                        <outlet property="comboSex" destination="Dlt-3t-MH0" id="oLc-Pq-gxL"/>
                         <outlet property="imgFace" destination="AWL-7Z-K5j" id="URl-v1-hfC"/>
                         <outlet property="textDescription" destination="ja6-RO-Mzx" id="WN4-gZ-yNO"/>
                         <outlet property="textNick" destination="5tY-zw-cCa" id="dUC-lV-Wtw"/>

@@ -7,16 +7,16 @@
 //
 
 #import "BaseMainViewController.h"
+#import "Combo.h"
 
 @interface ProfileViewController : BaseMainViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgFace;
 @property (weak, nonatomic) IBOutlet UITextField *textDescription;
 @property (weak, nonatomic) IBOutlet UITextField *textNick;
-@property (weak, nonatomic) IBOutlet UIButton *btnSex;
-@property (weak, nonatomic) IBOutlet UIButton *btnBirth;
-@property (weak, nonatomic) IBOutlet UIButton *btnAddr;
-- (IBAction)touchSex:(id)sender;
-- (IBAction)touchBirth:(id)sender;
-- (IBAction)touchAddr:(id)sender;
+@property (weak, nonatomic) IBOutlet Combo *comboSex;
+@property (weak, nonatomic) IBOutlet Combo *comboBirth;
+@property (weak, nonatomic) IBOutlet Combo *comboAddr1;
+@property (weak, nonatomic) IBOutlet Combo *comboAddr2;
+
 @end

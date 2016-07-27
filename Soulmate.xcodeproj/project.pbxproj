@@ -36,6 +36,7 @@
 		338800461D4847920048AD47 /* ViewPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800381D4847920048AD47 /* ViewPagerViewController.m */; };
 		3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800491D484B430048AD47 /* BaseMainViewController.m */; };
 		3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388004D1D484C550048AD47 /* CanapeSampleViewController.m */; };
+		338800521D4871070048AD47 /* Combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800511D4871070048AD47 /* Combo.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,8 @@
 		3388004B1D484BD10048AD47 /* CanapeSampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanapeSampleConstants.h; sourceTree = "<group>"; };
 		3388004C1D484C550048AD47 /* CanapeSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanapeSampleViewController.h; sourceTree = "<group>"; };
 		3388004D1D484C550048AD47 /* CanapeSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanapeSampleViewController.m; sourceTree = "<group>"; };
+		338800501D4871070048AD47 /* Combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Combo.h; path = Classes/Common/Control/Combo.h; sourceTree = "<group>"; };
+		338800511D4871070048AD47 /* Combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Combo.m; path = Classes/Common/Control/Combo.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +184,7 @@
 		338164F71D4728DE0025752C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3388004F1D4870CA0048AD47 /* Control */,
 				338800471D484B020048AD47 /* ViewController */,
 			);
 			name = Common;
@@ -274,6 +278,15 @@
 				338800491D484B430048AD47 /* BaseMainViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		3388004F1D4870CA0048AD47 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				338800501D4871070048AD47 /* Combo.h */,
+				338800511D4871070048AD47 /* Combo.m */,
+			);
+			name = Control;
 			sourceTree = "<group>";
 		};
 		3B45ABD63C64DADF6DDE7D2D /* Pods */ = {
@@ -424,6 +437,7 @@
 				338800431D4847920048AD47 /* ValidationViewController.m in Sources */,
 				3388003A1D4847920048AD47 /* AlertViewController.m in Sources */,
 				338800411D4847920048AD47 /* ToastViewController.m in Sources */,
+				338800521D4871070048AD47 /* Combo.m in Sources */,
 				3388003E1D4847920048AD47 /* PlistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

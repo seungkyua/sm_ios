@@ -3,5 +3,6 @@
 
 target 'Soulmate' do
 pod "Canape"
+pod "TPKeyboardAvoiding", "~> 1.3"
 end
 

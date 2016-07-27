@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)touchSex:(id)sender {
+}
+
+- (IBAction)touchBirth:(id)sender {
+}
+
+- (IBAction)touchAddr:(id)sender {
+}
 @end

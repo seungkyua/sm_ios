@@ -42,11 +42,14 @@ PODS:
   - Canape/Validation (0.1.0):
     - Canape/Combo
   - Canape/ViewPager (0.1.0)
+  - TPKeyboardAvoiding (1.3)
 
 DEPENDENCIES:
   - Canape
+  - TPKeyboardAvoiding (~> 1.3)
 
 SPEC CHECKSUMS:
   Canape: a0c5199420dc27a3dd03a3105786924e5e691419
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
 
 COCOAPODS: 0.38.2

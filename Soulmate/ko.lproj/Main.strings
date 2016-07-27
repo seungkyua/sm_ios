@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "1nI-rT-fEb"; */
+"1nI-rT-fEb.title" = "Home";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "WgL-dZ-9EX"; */
+"WgL-dZ-9EX.text" = "Login";
+
+/* Class = "UILabel"; text = "Intro"; ObjectID = "bpO-Ld-k5h"; */
+"bpO-Ld-k5h.text" = "Intro";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "mnf-4c-jGw"; */
+"mnf-4c-jGw.title" = "Profile";
+
+/* Class = "UIBarButtonItem"; title = "설정"; ObjectID = "qbW-0S-Gpp"; */
+"qbW-0S-Gpp.title" = "설정";

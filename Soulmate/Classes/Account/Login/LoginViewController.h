@@ -6,8 +6,8 @@
 //  Copyright © 2016년 bliex. All rights reserved.
 //
 
-#import "CPBaseMainViewController.h"
+#import "BaseMainViewController.h"
 
-@interface LoginViewController : CPBaseMainViewController
+@interface LoginViewController : BaseMainViewController
 
 @end

@@ -55,18 +55,123 @@
         <!--Profile-->
         <scene sceneID="QtQ-jj-z8C">
             <objects>
-                <viewController id="uXt-4Y-DF8" sceneMemberID="viewController">
+                <viewController id="uXt-4Y-DF8" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eah-e2-jA0"/>
                         <viewControllerLayoutGuide type="bottom" id="zUB-rz-xQQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Xq-1k-HdE">
+                    <view key="view" contentMode="scaleToFill" id="2Xq-1k-HdE" customClass="TPKeyboardAvoidingScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkT-tp-811">
+                                <rect key="frame" x="13" y="72" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5t-qB-Ioc">
+                                <rect key="frame" x="13" y="95" width="342" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="상대방에게 가장먼저 공개되는 사진입니다. 자연스러운 당신의 모습을 보여주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-YJ-5F3">
+                                <rect key="frame" x="13" y="100" width="342" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWL-7Z-K5j">
+                                <rect key="frame" x="13" y="152" width="342" height="260"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="자기 소개를 해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ja6-RO-Mzx">
+                                <rect key="frame" x="20" y="420" width="325" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1r-an-oTb">
+                                <rect key="frame" x="13" y="446" width="342" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-Ct-1JP">
+                                <rect key="frame" x="13" y="476" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8r-fW-rCg">
+                                <rect key="frame" x="14" y="499" width="341" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성별:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iru-q5-gpQ">
+                                <rect key="frame" x="13" y="503" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-wk-21d">
+                                <rect key="frame" x="14" y="527" width="341" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="생년월일:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlQ-4J-6Va">
+                                <rect key="frame" x="13" y="532" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-Mp-KpG">
+                                <rect key="frame" x="14" y="555" width="341" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="거주지:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYR-ec-Lmh">
+                                <rect key="frame" x="14" y="560" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-1d-28Y">
+                                <rect key="frame" x="15" y="583" width="341" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tY-zw-cCa">
+                                <rect key="frame" x="70" y="472" width="286" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxW-n8-r8k">
+                                <rect key="frame" x="56" y="499" width="299" height="30"/>
+                                <state key="normal" title="여"/>
+                                <connections>
+                                    <action selector="touchSex:" destination="uXt-4Y-DF8" eventType="touchUpInside" id="n9D-WP-ZZX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-VW-wbn">
+                                <rect key="frame" x="85" y="528" width="270" height="30"/>
+                                <state key="normal" title="1994년 7월 18일"/>
+                                <connections>
+                                    <action selector="touchBirth:" destination="uXt-4Y-DF8" eventType="touchUpInside" id="N0p-UY-ffU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-7f-xGP">
+                                <rect key="frame" x="71" y="556" width="284" height="30"/>
+                                <state key="normal" title="서울"/>
+                                <connections>
+                                    <action selector="touchAddr:" destination="uXt-4Y-DF8" eventType="touchUpInside" id="WOH-0B-PR3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="mnf-4c-jGw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btnAddr" destination="bKc-7f-xGP" id="K5R-wB-JpC"/>
+                        <outlet property="btnBirth" destination="vGS-VW-wbn" id="d2F-gy-gd5"/>
+                        <outlet property="btnSex" destination="TxW-n8-r8k" id="Bjh-S5-r1N"/>
+                        <outlet property="imgFace" destination="AWL-7Z-K5j" id="URl-v1-hfC"/>
+                        <outlet property="textDescription" destination="ja6-RO-Mzx" id="WN4-gZ-yNO"/>
+                        <outlet property="textNick" destination="5tY-zw-cCa" id="dUC-lV-Wtw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chd-Me-Gea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,6 +191,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="1nI-rT-fEb">
+                        <barButtonItem key="leftBarButtonItem" title="Canape" id="fUN-uS-eSx">
+                            <connections>
+                                <action selector="goCanapeSample:" destination="3Cb-cL-kTE" id="5fa-M4-hJ2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="설정" id="qbW-0S-Gpp">
                             <connections>
                                 <segue destination="uXt-4Y-DF8" kind="push" id="Qai-NT-Igw"/>

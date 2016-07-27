@@ -18,6 +18,24 @@
 		338165071D4729EC0025752C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338165061D4729EC0025752C /* LoginViewController.m */; };
 		3381650D1D472BB10025752C /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3381650C1D472BB10025752C /* Setting.plist */; };
 		3381650F1D472BBE0025752C /* SSO.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3381650E1D472BBD0025752C /* SSO.plist */; };
+		338800151D483EB40048AD47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 338800171D483EB40048AD47 /* Localizable.strings */; };
+		3388001C1D4846C00048AD47 /* Canape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3388001B1D4846C00048AD47 /* Canape.storyboard */; };
+		338800391D4847920048AD47 /* ActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388001F1D4847920048AD47 /* ActionSheetViewController.m */; };
+		3388003A1D4847920048AD47 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800211D4847920048AD47 /* AlertViewController.m */; };
+		3388003B1D4847920048AD47 /* ComboSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800231D4847920048AD47 /* ComboSample.m */; };
+		3388003C1D4847920048AD47 /* EncryptionPlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800251D4847920048AD47 /* EncryptionPlistViewController.m */; };
+		3388003D1D4847920048AD47 /* LoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800271D4847920048AD47 /* LoaderViewController.m */; };
+		3388003E1D4847920048AD47 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800291D4847920048AD47 /* PlistViewController.m */; };
+		3388003F1D4847920048AD47 /* SelectableButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388002B1D4847920048AD47 /* SelectableButtonViewController.m */; };
+		338800401D4847920048AD47 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388002D1D4847920048AD47 /* StackViewController.m */; };
+		338800411D4847920048AD47 /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388002F1D4847920048AD47 /* ToastViewController.m */; };
+		338800421D4847920048AD47 /* TokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800311D4847920048AD47 /* TokenViewController.m */; };
+		338800431D4847920048AD47 /* ValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800331D4847920048AD47 /* ValidationViewController.m */; };
+		338800441D4847920048AD47 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 338800341D4847920048AD47 /* View.xib */; };
+		338800451D4847920048AD47 /* ViewPagerSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800361D4847920048AD47 /* ViewPagerSubViewController.m */; };
+		338800461D4847920048AD47 /* ViewPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800381D4847920048AD47 /* ViewPagerViewController.m */; };
+		3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800491D484B430048AD47 /* BaseMainViewController.m */; };
+		3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388004D1D484C550048AD47 /* CanapeSampleViewController.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +59,43 @@
 		338165061D4729EC0025752C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Account/Login/LoginViewController.m; sourceTree = "<group>"; };
 		3381650C1D472BB10025752C /* Setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Setting.plist; sourceTree = "<group>"; };
 		3381650E1D472BBD0025752C /* SSO.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SSO.plist; sourceTree = "<group>"; };
+		338800111D483E0D0048AD47 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		338800121D483E0D0048AD47 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		338800181D483EB70048AD47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		338800191D483EC20048AD47 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3388001B1D4846C00048AD47 /* Canape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Canape.storyboard; path = Storyboards/Canape.storyboard; sourceTree = "<group>"; };
+		3388001E1D4847920048AD47 /* ActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetViewController.h; sourceTree = "<group>"; };
+		3388001F1D4847920048AD47 /* ActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetViewController.m; sourceTree = "<group>"; };
+		338800201D4847920048AD47 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		338800211D4847920048AD47 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		338800221D4847920048AD47 /* ComboSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboSample.h; sourceTree = "<group>"; };
+		338800231D4847920048AD47 /* ComboSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboSample.m; sourceTree = "<group>"; };
+		338800241D4847920048AD47 /* EncryptionPlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionPlistViewController.h; sourceTree = "<group>"; };
+		338800251D4847920048AD47 /* EncryptionPlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionPlistViewController.m; sourceTree = "<group>"; };
+		338800261D4847920048AD47 /* LoaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoaderViewController.h; sourceTree = "<group>"; };
+		338800271D4847920048AD47 /* LoaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoaderViewController.m; sourceTree = "<group>"; };
+		338800281D4847920048AD47 /* PlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
+		338800291D4847920048AD47 /* PlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistViewController.m; sourceTree = "<group>"; };
+		3388002A1D4847920048AD47 /* SelectableButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableButtonViewController.h; sourceTree = "<group>"; };
+		3388002B1D4847920048AD47 /* SelectableButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableButtonViewController.m; sourceTree = "<group>"; };
+		3388002C1D4847920048AD47 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
+		3388002D1D4847920048AD47 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
+		3388002E1D4847920048AD47 /* ToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastViewController.h; sourceTree = "<group>"; };
+		3388002F1D4847920048AD47 /* ToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
+		338800301D4847920048AD47 /* TokenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenViewController.h; sourceTree = "<group>"; };
+		338800311D4847920048AD47 /* TokenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenViewController.m; sourceTree = "<group>"; };
+		338800321D4847920048AD47 /* ValidationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationViewController.h; sourceTree = "<group>"; };
+		338800331D4847920048AD47 /* ValidationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationViewController.m; sourceTree = "<group>"; };
+		338800341D4847920048AD47 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		338800351D4847920048AD47 /* ViewPagerSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerSubViewController.h; sourceTree = "<group>"; };
+		338800361D4847920048AD47 /* ViewPagerSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerSubViewController.m; sourceTree = "<group>"; };
+		338800371D4847920048AD47 /* ViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerViewController.h; sourceTree = "<group>"; };
+		338800381D4847920048AD47 /* ViewPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerViewController.m; sourceTree = "<group>"; };
+		338800481D484B430048AD47 /* BaseMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseMainViewController.h; path = Classes/Common/ViewController/BaseMainViewController.h; sourceTree = "<group>"; };
+		338800491D484B430048AD47 /* BaseMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseMainViewController.m; path = Classes/Common/ViewController/BaseMainViewController.m; sourceTree = "<group>"; };
+		3388004B1D484BD10048AD47 /* CanapeSampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanapeSampleConstants.h; sourceTree = "<group>"; };
+		3388004C1D484C550048AD47 /* CanapeSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanapeSampleViewController.h; sourceTree = "<group>"; };
+		3388004D1D484C550048AD47 /* CanapeSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanapeSampleViewController.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +133,8 @@
 		338164DD1D4726D20025752C /* Soulmate */ = {
 			isa = PBXGroup;
 			children = (
+				3388001D1D4847920048AD47 /* CanapeSample */,
+				3388001A1D4846970048AD47 /* Storyboards */,
 				338164F51D4728C80025752C /* Classes */,
 				338164E11D4726D20025752C /* AppDelegate.h */,
 				338164E21D4726D20025752C /* AppDelegate.m */,
@@ -96,6 +153,7 @@
 				338164DF1D4726D20025752C /* main.m */,
 				3381650C1D472BB10025752C /* Setting.plist */,
 				3381650E1D472BBD0025752C /* SSO.plist */,
+				338800171D483EB40048AD47 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,6 +181,7 @@
 		338164F71D4728DE0025752C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				338800471D484B020048AD47 /* ViewController */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -161,6 +220,60 @@
 				338165031D4729D50025752C /* ProfileViewController.m */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		3388001A1D4846970048AD47 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3388001B1D4846C00048AD47 /* Canape.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3388001D1D4847920048AD47 /* CanapeSample */ = {
+			isa = PBXGroup;
+			children = (
+				3388004B1D484BD10048AD47 /* CanapeSampleConstants.h */,
+				3388001E1D4847920048AD47 /* ActionSheetViewController.h */,
+				3388001F1D4847920048AD47 /* ActionSheetViewController.m */,
+				338800201D4847920048AD47 /* AlertViewController.h */,
+				338800211D4847920048AD47 /* AlertViewController.m */,
+				338800221D4847920048AD47 /* ComboSample.h */,
+				338800231D4847920048AD47 /* ComboSample.m */,
+				338800241D4847920048AD47 /* EncryptionPlistViewController.h */,
+				338800251D4847920048AD47 /* EncryptionPlistViewController.m */,
+				338800261D4847920048AD47 /* LoaderViewController.h */,
+				338800271D4847920048AD47 /* LoaderViewController.m */,
+				338800281D4847920048AD47 /* PlistViewController.h */,
+				338800291D4847920048AD47 /* PlistViewController.m */,
+				3388002A1D4847920048AD47 /* SelectableButtonViewController.h */,
+				3388002B1D4847920048AD47 /* SelectableButtonViewController.m */,
+				3388002C1D4847920048AD47 /* StackViewController.h */,
+				3388002D1D4847920048AD47 /* StackViewController.m */,
+				3388002E1D4847920048AD47 /* ToastViewController.h */,
+				3388002F1D4847920048AD47 /* ToastViewController.m */,
+				338800301D4847920048AD47 /* TokenViewController.h */,
+				338800311D4847920048AD47 /* TokenViewController.m */,
+				338800321D4847920048AD47 /* ValidationViewController.h */,
+				338800331D4847920048AD47 /* ValidationViewController.m */,
+				338800341D4847920048AD47 /* View.xib */,
+				338800351D4847920048AD47 /* ViewPagerSubViewController.h */,
+				338800361D4847920048AD47 /* ViewPagerSubViewController.m */,
+				338800371D4847920048AD47 /* ViewPagerViewController.h */,
+				338800381D4847920048AD47 /* ViewPagerViewController.m */,
+				3388004C1D484C550048AD47 /* CanapeSampleViewController.h */,
+				3388004D1D484C550048AD47 /* CanapeSampleViewController.m */,
+			);
+			path = CanapeSample;
+			sourceTree = "<group>";
+		};
+		338800471D484B020048AD47 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				338800481D484B430048AD47 /* BaseMainViewController.h */,
+				338800491D484B430048AD47 /* BaseMainViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		3B45ABD63C64DADF6DDE7D2D /* Pods */ = {
@@ -223,6 +336,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 338164D21D4726D10025752C;
 			productRefGroup = 338164DC1D4726D20025752C /* Products */;
@@ -240,10 +354,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				338164EE1D4726D20025752C /* LaunchScreen.storyboard in Resources */,
+				338800151D483EB40048AD47 /* Localizable.strings in Resources */,
 				3381650F1D472BBE0025752C /* SSO.plist in Resources */,
 				3381650D1D472BB10025752C /* Setting.plist in Resources */,
+				338800441D4847920048AD47 /* View.xib in Resources */,
 				338164EB1D4726D20025752C /* Assets.xcassets in Resources */,
 				338164E91D4726D20025752C /* Main.storyboard in Resources */,
+				3388001C1D4846C00048AD47 /* Canape.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +404,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338800461D4847920048AD47 /* ViewPagerViewController.m in Sources */,
+				338800421D4847920048AD47 /* TokenViewController.m in Sources */,
 				338164E31D4726D20025752C /* AppDelegate.m in Sources */,
 				338164E01D4726D20025752C /* main.m in Sources */,
+				338800391D4847920048AD47 /* ActionSheetViewController.m in Sources */,
 				338164FB1D4729360025752C /* HomeViewController.m in Sources */,
+				3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */,
 				338165071D4729EC0025752C /* LoginViewController.m in Sources */,
 				338165041D4729D50025752C /* ProfileViewController.m in Sources */,
+				3388003B1D4847920048AD47 /* ComboSample.m in Sources */,
+				338800451D4847920048AD47 /* ViewPagerSubViewController.m in Sources */,
 				338164FE1D47295E0025752C /* IntroViewController.m in Sources */,
+				3388003F1D4847920048AD47 /* SelectableButtonViewController.m in Sources */,
+				3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */,
+				338800401D4847920048AD47 /* StackViewController.m in Sources */,
+				3388003D1D4847920048AD47 /* LoaderViewController.m in Sources */,
+				3388003C1D4847920048AD47 /* EncryptionPlistViewController.m in Sources */,
+				338800431D4847920048AD47 /* ValidationViewController.m in Sources */,
+				3388003A1D4847920048AD47 /* AlertViewController.m in Sources */,
+				338800411D4847920048AD47 /* ToastViewController.m in Sources */,
+				3388003E1D4847920048AD47 /* PlistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +435,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				338164E81D4726D20025752C /* Base */,
+				338800111D483E0D0048AD47 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -311,8 +444,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				338164ED1D4726D20025752C /* Base */,
+				338800121D483E0D0048AD47 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		338800171D483EB40048AD47 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338800181D483EB70048AD47 /* en */,
+				338800191D483EC20048AD47 /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

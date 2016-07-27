@@ -33,5 +33,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)goCanapeSample:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Canape" bundle:[NSBundle mainBundle]];
+    UINavigationController *navi = [storyboard instantiateViewControllerWithIdentifier:@"canapeNavi"];
+    
+    [self presentViewController:navi animated:TRUE completion:nil];
+}
 
 @end

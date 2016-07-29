@@ -9,7 +9,7 @@
 #import "ProfileViewController.h"
 #import <Canape/Canape.h>
 
-@interface ProfileViewController () <CPActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CPComboBaseDelegate>
+@interface ProfileViewController () <CPActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CPComboBaseDelegate, AutoResizeTextViewDelegate>
 
 @property (nonatomic, strong) CPActionSheet *actionSheet;
 @property (nonatomic, strong) NSDictionary *addrData;
@@ -23,6 +23,8 @@
     // Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    UIScrollView *sc = (UIScrollView *) self.view;
+    [sc setContentSize:CGSizeMake(DEVICE_SIZE.width, _bottomView.frame.origin.y + _bottomView.frame.size.height)];
     
     // imageView 터치 설정
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchFace)];
@@ -36,6 +38,14 @@
                                                           NSLocalizedString(@"account.profile.face.actionsheet.title2", nil),
                                                           NSLocalizedString(@"account.profile.face.actionsheet.title3", nil)]
                                       cancelButtonTitle:nil delegate:self];
+    
+    CGRect rect = _imgFace.frame;
+    rect.origin.y = rect.origin.y + rect.size.height + 5;
+    rect.size.height = 30;
+    _textDescription = [[AutoResizeTextView alloc] initWithFrame:rect];
+    [_textDescription setScrollEnabled:NO];
+    _textDescription.textViewDelegate = self;
+    [self.view addSubview:_textDescription];
     
     // 성별 콤보
     [_comboSex setPlaceholder:@"선택하세요"];
@@ -80,6 +90,36 @@
     [_comboAddr2 setPlaceholder:@"시/군/구"];
     [_comboAddr2 setParent:self.view];
     [_comboAddr2 setPlaceholderLabelColor:[UIColor grayColor]];
+    
+    [_comboLastSchool setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.last.school.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboLastSchool setParent:self.view];
+    
+    [_comboJob setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.job.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboJob setParent:self.view];
+    
+    [_comboSalary setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.salary.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboSalary setParent:self.view];
+    
+    [_comboBloodType setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.blood.type.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboBloodType setParent:self.view];
+    
+    [_comboSmoke setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.smoke.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboSmoke setParent:self.view];
+    
+    [_comboDrink setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.drink.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboDrink setParent:self.view];
+    
+    [_comboReligion setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.religion.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboReligion setParent:self.view];
+    
+    [_comboMarriage setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.marriage.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboMarriage setParent:self.view];;
+    
+    [_comboMyStyle setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.my.style.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboMyStyle setParent:self.view];
+    
+    [_comboIdealType setData:[NSMutableArray arrayWithArray:[NSLocalizedString(@"account.profile.ideal.type.list", nil) componentsSeparatedByString:@"," ]]];
+    [_comboIdealType setParent:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -135,6 +175,24 @@
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - AutoResizeTextViewDelegate
+
+- (void) changeHeightWithTextView:(AutoResizeTextView *)autoResizeTextView height:(double)height {
+    [self viewDidLayoutSubviews];
+    
+}
+
+- (void)viewDidLayoutSubviews {
+    
+    [super viewDidLayoutSubviews];
+
+    CGRect rect = _bottomView.frame;
+    rect.origin.y = _textDescription.frame.origin.y + _textDescription.frame.size.height;
+    _bottomView.frame = rect;
+    
+    [self.view layoutSubviews]; //이부분이 중요！
 }
 
 #pragma mark - AddrCombo Delegate

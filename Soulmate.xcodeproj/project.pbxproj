@@ -37,6 +37,7 @@
 		3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800491D484B430048AD47 /* BaseMainViewController.m */; };
 		3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388004D1D484C550048AD47 /* CanapeSampleViewController.m */; };
 		338800521D4871070048AD47 /* Combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800511D4871070048AD47 /* Combo.m */; };
+		338800581D4B1D2A0048AD47 /* AutoResizeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		3388004D1D484C550048AD47 /* CanapeSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanapeSampleViewController.m; sourceTree = "<group>"; };
 		338800501D4871070048AD47 /* Combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Combo.h; path = Classes/Common/Control/Combo.h; sourceTree = "<group>"; };
 		338800511D4871070048AD47 /* Combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Combo.m; path = Classes/Common/Control/Combo.m; sourceTree = "<group>"; };
+		338800561D4B1D2A0048AD47 /* AutoResizeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoResizeTextView.h; path = Classes/Common/Control/AutoResizeTextView.h; sourceTree = "<group>"; };
+		338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoResizeTextView.m; path = Classes/Common/Control/AutoResizeTextView.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -285,6 +288,8 @@
 			children = (
 				338800501D4871070048AD47 /* Combo.h */,
 				338800511D4871070048AD47 /* Combo.m */,
+				338800561D4B1D2A0048AD47 /* AutoResizeTextView.h */,
+				338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				3388003F1D4847920048AD47 /* SelectableButtonViewController.m in Sources */,
 				3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */,
 				338800401D4847920048AD47 /* StackViewController.m in Sources */,
+				338800581D4B1D2A0048AD47 /* AutoResizeTextView.m in Sources */,
 				3388003D1D4847920048AD47 /* LoaderViewController.m in Sources */,
 				3388003C1D4847920048AD47 /* EncryptionPlistViewController.m in Sources */,
 				338800431D4847920048AD47 /* ValidationViewController.m in Sources */,

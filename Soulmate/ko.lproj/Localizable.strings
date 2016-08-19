@@ -1,27 +1,51 @@
-/* 
-  Localizable.strings
-  Soulmate
+/*
+ Localizable.strings
+ Soulmate
+ 
+ Created by HWANGIN YONG on 2016. 7. 27..
+ Copyright © 2016년 bliex. All rights reserved.
+ */
 
-  Created by HWANGIN YONG on 2016. 7. 27..
-  Copyright © 2016년 bliex. All rights reserved.
-*/
-
+"account.profile.sub.title1" = "내 소개";
+"account.profile.sub.description1" = "상대방에게 가장먼저 공개되는 사진입니다. 자연스러운 당신의 모습을 보여주세요.";
 "account.profile.face.actionsheet.title1" = "사진앨범";
 "account.profile.face.actionsheet.title2" = "포스팅에서 불러오기";
 "account.profile.face.actionsheet.title3" = "촬영하기";
+"account.profile.nick.title" = "닉네임:";
+"account.profile.sex.title" = "성별:";
 "account.profile.sex.male" = "남";
 "account.profile.sex.female" = "여";
+"account.profile.addr.title" = "거주지:";
 /* 수정시 https://jsonformatter.curiousconcept.com/ 이용 */
 "account.profile.addr.data" = '[{"name":"서울","children":["강남구","강동구","강북구","강서구","관악구","광진구","구로구","금천구","노원구","도봉구","동대문구","동작구","마포구","서대문구","서초구","성동구","성북구","송파구","양천구","영등포구","용산구","은평구","종로구","중구","중랑구"]},{"name":"부산","children":["강서구","금정구","기장군","남구","동구","동래구","부산진구","북구","사상구","사하구","서구","수영구","연제구","중구","해운대구"]},{"name":"인천","children":["강화군","계양구","남구","남동구","동구","부평구","서구","연수구","옹진군","중구"]},{"name":"대구","children":["남구","달서구","달성군","동구","북구","서구","수성구","중구"]},{"name":"광주","children":["광산구","남구","동구","북구","서구"]},{"name":"대전","children":["대덕구","동구","서구","유성구","중구"]},{"name":"울산","children":["남구","동구","북구","울주군","중구"]},{"name":"경기","children":["가평군","고양시","고양시 덕양구","고양시 일산동구","고양시 일산서구","과천시","광명시","광주시","구리시","군포시","김포시","남양주시","동두천시","부천시","성남시","성남시 분당구","성남시 수정구","성남시 중원구","수원시","수원시 권선구","수원시 영통구","수원시 장안구","수원시 팔달구","시흥시","안산시","안산시 단원구","안산시 상록구","안성시","안양시","안양시 동안구","안양시 만안구","양주시","양평군","여주시","연천군","오산시","용인시","용인시 기흥구","용인시 수지구","용인시 처인구","의왕시","의정부시","이천시","파주시","평택시","포천시","하남시","화성시"]},{"name":"강원도","children":["강릉시","고성군","동해시","삼척시","속초시","양구군","양양군","영월군","원주시","인제군","정선군","철원군","춘천시","태백시","평창군","홍천군","화천군","횡성군"]},{"name":"충청남도","children":["계룡시","공주시","금산군","논산시","당진시","보령시","부여군","서산시","서천군","아산시","예산군","천안시","천안시 동남구","천안시 서북구","청양군","태안군","홍성군"]},{"name":"충청북도","children":["괴산군","단양군","보은군","영동군","옥천군","음성군","제천시","증평군","진천군","청주시","청주시 상당구","청주시 서원구","청주시 청원구","청주시 흥덕구","충주시"]},{"name":"경상북도","children":["경산시","경주시","고령군","구미시","군위군","김천시","문경시","봉화군","상주시","성주군","안동시","영덕군","영양군","영주시","영천시","예천군","울릉군","울진군","의성군","청도군","청송군","칠곡군","포항시","포항시 남구","포항시 북구"]},{"name":"경상남도","children":["거제시","거창군","고성군","김해시","남해군","밀양시","사천시","산청군","양산시","의령군","진주시","창년군","창원시","창원시 마산합포구","창원시 마산회원구","창원시 성산구","창원시 의창구","창원시 진해구","통영시","하동군","함안군","함양군","합천군"]},{"name":"전라북도","children":["고창군","군산시","김제시","남원시","무주군","부안군","순창군","완주군","익산시","임실군","장수군","전주시","전주시 덕진구","전주시 완산구","정읍시","진안군"]},{"name":"전라남도","children":["강진군","고흥군","곡성군","광양시","구례군","나주시","담양군","목포시","무안군","보성군","순천시","신안군","여수시","영광군","영암군","완도군","장성군","장흥군","진도군","함평군","해남군","화순군"]},{"name":"제주도","children":["서귀포시","제주시"]}]';
+"account.profile.birth.title" = "생년월일:";
 "account.profile.birth.format" = "yyyy년 M월 d일";
+"account.profile.sub.title2" = "내 수준 높이기";
+"account.profile.sub.description2" = "* 신상 정보를 입력하시면 상대방에게 더 높은 호감과 관심을 받을 수 있고 리워드로 빅관심 아이템을 받을 수 있어요.";
+"account.profile.name.title" = "이름:";
 "account.profile.name.alert" = "한번 입력한 실명은 다시 수정 하실 수 없습니다. 꼭 자신의 실제 이름을 입력해주세요.";
+"account.profile.last.school.title" = "최종학력:";
 "account.profile.last.school.list" = "고등학교 중퇴,고등학교 졸업,대학 중퇴,대학 졸업,석사/박사 학위";
 "account.profile.job.list" = "건설,과학/공학,군인/군무원,금융/재무기술,미술/음악,프리랜서/작가,공무원/연구기관,비즈니스 관리,엔터테인먼트/미디어,영업/마케팅,의사/변호사 전문직,IT/통신";
+"account.profile.university.title" = "대학교:";
+"account.profile.graduate.school.title" = "대학원:";
+"account.profile.company.name.title" = "직장명:";
+"account.profile.job.title" = "직업:";
+"account.profile.salary.title" = "수입수준:";
 "account.profile.salary.list" = "~ 1600만원,1600만원 ~ 2000만원,2000만원 ~ 3000만원,3000만원 ~ 4000만원,4000만원 ~ 5000만원,5000만원 ~ 6000만원,6000만원 ~ 7000만원,7000만원 ~ 8000만원,8000만원 ~ 9000만원,9000만원 ~ 1억,1억 ~";
+"account.profile.sub.title3" = "다양한 조건 맞추기";
+"account.profile.sub.description3" = "* 추가 정보를 입력하시면 더 정확히 매칭될 수 있고 하트를 리워드로 드립니다.";
+"account.profile.blood.type.title" = "혈액형:";
 "account.profile.blood.type.list" = "A,B,AB,O";
+"account.profile.smoke.title" = "흡연여부:";
 "account.profile.smoke.list" = "흡연,비흡연";
+"account.profile.drink.title" = "음주수준:";
 "account.profile.drink.list" = "전혀 마시지 않는다,술자리 분위기상 약간 마신다,가끔 마셔요,어느 정도 즐기는 편이다,자주 술을 마신다";
+"account.profile.religion.title" = "종교:";
 "account.profile.religion.list" = "없음,기독교,천주교,불교,원불교,유대교,이슬람교,힌두교,기타";
+"account.profile.marriage.title" = "결혼경험";
 "account.profile.marriage.list" = "결혼 경험 없음,별거중,이혼,사별";
+"account.profile.my.style.title" = "나의 스타일:";
 "account.profile.my.style.list" = "섹시한,터프한,귀여운,지적인,패션 감각있는,유머있는,듬직한,착한,센스있는,도도한,활동적인,섬세한,상냥한,이해심 많은,창의적인,낙천적인,신중한,열정적인,기타";
+"account.profile.ideal.type.title" = "이상형의 스타일:";
 "account.profile.ideal.type.list" = "날씬한 몸매,상냥한 성격,다정하고 자상한,단단한 근육질,가정적인,자기 사업을 하는,전문직종(변호사/의사 등) 종사자, 글래머러스한 육체파";

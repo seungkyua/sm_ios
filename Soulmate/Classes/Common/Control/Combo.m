@@ -123,11 +123,33 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [self.data objectAtIndex:row];
+    id rowData = [self.data objectAtIndex:row];
+    if ([rowData isKindOfClass:[NSMutableDictionary class]] || [rowData isKindOfClass:[NSMutableDictionary class]]) {
+        return [rowData objectForKey:@"text"];
+    } else {
+        return rowData;
+    }
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self setValue:[self.data objectAtIndex:row]];
+
+    id rowData = [self.data objectAtIndex:row];
+    if ([rowData isKindOfClass:[NSMutableDictionary class]] || [rowData isKindOfClass:[NSMutableDictionary class]]) {
+        [self setValue:[rowData objectForKey:@"text"]];
+        [self setSelectedData:[rowData objectForKey:@"data"]];
+        
+        if (_comboDelegate != nil && [_comboDelegate respondsToSelector:@selector(combo:text:data:)]) {
+            [_comboDelegate combo:self text:[rowData objectForKey:@"text"] data:[rowData objectForKey:@"data"]];
+        }
+    } else {
+        [self setValue:rowData];
+        [self setSelectedData:rowData];
+        
+        if (_comboDelegate != nil && [_comboDelegate respondsToSelector:@selector(combo:text:data:)]) {
+            [_comboDelegate combo:self text:rowData data:rowData];
+        }
+    }
+    
 }
 
 @end

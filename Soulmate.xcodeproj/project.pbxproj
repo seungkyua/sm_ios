@@ -38,6 +38,14 @@
 		3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388004D1D484C550048AD47 /* CanapeSampleViewController.m */; };
 		338800521D4871070048AD47 /* Combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800511D4871070048AD47 /* Combo.m */; };
 		338800581D4B1D2A0048AD47 /* AutoResizeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */; };
+		3388005C1D4F41C20048AD47 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388005B1D4F41C20048AD47 /* Profile.m */; };
+		338800801D5060790048AD47 /* ProfileTableViewComboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800731D5060790048AD47 /* ProfileTableViewComboCell.m */; };
+		338800821D5060790048AD47 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800771D5060790048AD47 /* ProfileTableViewController.m */; };
+		338800831D5060790048AD47 /* ProfileTableViewImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800791D5060790048AD47 /* ProfileTableViewImageViewCell.m */; };
+		338800841D5060790048AD47 /* ProfileTableViewSubTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388007B1D5060790048AD47 /* ProfileTableViewSubTitleCell.m */; };
+		338800851D5060790048AD47 /* ProfileTableViewTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388007D1D5060790048AD47 /* ProfileTableViewTextFieldCell.m */; };
+		338800861D5060790048AD47 /* ProfileTableViewTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388007F1D5060790048AD47 /* ProfileTableViewTextViewCell.m */; };
+		3388008A1D669C7E0048AD47 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800891D669C7E0048AD47 /* CommonUtil.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +110,22 @@
 		338800511D4871070048AD47 /* Combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Combo.m; path = Classes/Common/Control/Combo.m; sourceTree = "<group>"; };
 		338800561D4B1D2A0048AD47 /* AutoResizeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoResizeTextView.h; path = Classes/Common/Control/AutoResizeTextView.h; sourceTree = "<group>"; };
 		338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoResizeTextView.m; path = Classes/Common/Control/AutoResizeTextView.m; sourceTree = "<group>"; };
+		3388005A1D4F41C20048AD47 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Classes/Common/Model/Profile.h; sourceTree = "<group>"; };
+		3388005B1D4F41C20048AD47 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Classes/Common/Model/Profile.m; sourceTree = "<group>"; };
+		338800721D5060790048AD47 /* ProfileTableViewComboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewComboCell.h; path = Classes/Account/Profile/ProfileTableViewComboCell.h; sourceTree = "<group>"; };
+		338800731D5060790048AD47 /* ProfileTableViewComboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewComboCell.m; path = Classes/Account/Profile/ProfileTableViewComboCell.m; sourceTree = "<group>"; };
+		338800761D5060790048AD47 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewController.h; path = Classes/Account/Profile/ProfileTableViewController.h; sourceTree = "<group>"; };
+		338800771D5060790048AD47 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewController.m; path = Classes/Account/Profile/ProfileTableViewController.m; sourceTree = "<group>"; };
+		338800781D5060790048AD47 /* ProfileTableViewImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewImageViewCell.h; path = Classes/Account/Profile/ProfileTableViewImageViewCell.h; sourceTree = "<group>"; };
+		338800791D5060790048AD47 /* ProfileTableViewImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewImageViewCell.m; path = Classes/Account/Profile/ProfileTableViewImageViewCell.m; sourceTree = "<group>"; };
+		3388007A1D5060790048AD47 /* ProfileTableViewSubTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewSubTitleCell.h; path = Classes/Account/Profile/ProfileTableViewSubTitleCell.h; sourceTree = "<group>"; };
+		3388007B1D5060790048AD47 /* ProfileTableViewSubTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewSubTitleCell.m; path = Classes/Account/Profile/ProfileTableViewSubTitleCell.m; sourceTree = "<group>"; };
+		3388007C1D5060790048AD47 /* ProfileTableViewTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewTextFieldCell.h; path = Classes/Account/Profile/ProfileTableViewTextFieldCell.h; sourceTree = "<group>"; };
+		3388007D1D5060790048AD47 /* ProfileTableViewTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewTextFieldCell.m; path = Classes/Account/Profile/ProfileTableViewTextFieldCell.m; sourceTree = "<group>"; };
+		3388007E1D5060790048AD47 /* ProfileTableViewTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewTextViewCell.h; path = Classes/Account/Profile/ProfileTableViewTextViewCell.h; sourceTree = "<group>"; };
+		3388007F1D5060790048AD47 /* ProfileTableViewTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewTextViewCell.m; path = Classes/Account/Profile/ProfileTableViewTextViewCell.m; sourceTree = "<group>"; };
+		338800881D669C7E0048AD47 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonUtil.h; path = Classes/Common/Util/CommonUtil.h; sourceTree = "<group>"; };
+		338800891D669C7E0048AD47 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonUtil.m; path = Classes/Common/Util/CommonUtil.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +211,8 @@
 		338164F71D4728DE0025752C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				338800871D669C0F0048AD47 /* Util */,
+				338800591D4F41300048AD47 /* Model */,
 				3388004F1D4870CA0048AD47 /* Control */,
 				338800471D484B020048AD47 /* ViewController */,
 			);
@@ -223,6 +249,18 @@
 		338165011D4729840025752C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				338800721D5060790048AD47 /* ProfileTableViewComboCell.h */,
+				338800731D5060790048AD47 /* ProfileTableViewComboCell.m */,
+				338800761D5060790048AD47 /* ProfileTableViewController.h */,
+				338800771D5060790048AD47 /* ProfileTableViewController.m */,
+				338800781D5060790048AD47 /* ProfileTableViewImageViewCell.h */,
+				338800791D5060790048AD47 /* ProfileTableViewImageViewCell.m */,
+				3388007A1D5060790048AD47 /* ProfileTableViewSubTitleCell.h */,
+				3388007B1D5060790048AD47 /* ProfileTableViewSubTitleCell.m */,
+				3388007C1D5060790048AD47 /* ProfileTableViewTextFieldCell.h */,
+				3388007D1D5060790048AD47 /* ProfileTableViewTextFieldCell.m */,
+				3388007E1D5060790048AD47 /* ProfileTableViewTextViewCell.h */,
+				3388007F1D5060790048AD47 /* ProfileTableViewTextViewCell.m */,
 				338165021D4729D50025752C /* ProfileViewController.h */,
 				338165031D4729D50025752C /* ProfileViewController.m */,
 			);
@@ -292,6 +330,24 @@
 				338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */,
 			);
 			name = Control;
+			sourceTree = "<group>";
+		};
+		338800591D4F41300048AD47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3388005A1D4F41C20048AD47 /* Profile.h */,
+				3388005B1D4F41C20048AD47 /* Profile.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		338800871D669C0F0048AD47 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				338800881D669C7E0048AD47 /* CommonUtil.h */,
+				338800891D669C7E0048AD47 /* CommonUtil.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		3B45ABD63C64DADF6DDE7D2D /* Pods */ = {
@@ -425,21 +481,29 @@
 				338800461D4847920048AD47 /* ViewPagerViewController.m in Sources */,
 				338800421D4847920048AD47 /* TokenViewController.m in Sources */,
 				338164E31D4726D20025752C /* AppDelegate.m in Sources */,
+				338800861D5060790048AD47 /* ProfileTableViewTextViewCell.m in Sources */,
 				338164E01D4726D20025752C /* main.m in Sources */,
+				338800841D5060790048AD47 /* ProfileTableViewSubTitleCell.m in Sources */,
+				338800851D5060790048AD47 /* ProfileTableViewTextFieldCell.m in Sources */,
 				338800391D4847920048AD47 /* ActionSheetViewController.m in Sources */,
+				338800801D5060790048AD47 /* ProfileTableViewComboCell.m in Sources */,
 				338164FB1D4729360025752C /* HomeViewController.m in Sources */,
 				3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */,
 				338165071D4729EC0025752C /* LoginViewController.m in Sources */,
+				3388005C1D4F41C20048AD47 /* Profile.m in Sources */,
+				3388008A1D669C7E0048AD47 /* CommonUtil.m in Sources */,
 				338165041D4729D50025752C /* ProfileViewController.m in Sources */,
 				3388003B1D4847920048AD47 /* ComboSample.m in Sources */,
 				338800451D4847920048AD47 /* ViewPagerSubViewController.m in Sources */,
 				338164FE1D47295E0025752C /* IntroViewController.m in Sources */,
 				3388003F1D4847920048AD47 /* SelectableButtonViewController.m in Sources */,
+				338800831D5060790048AD47 /* ProfileTableViewImageViewCell.m in Sources */,
 				3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */,
 				338800401D4847920048AD47 /* StackViewController.m in Sources */,
 				338800581D4B1D2A0048AD47 /* AutoResizeTextView.m in Sources */,
 				3388003D1D4847920048AD47 /* LoaderViewController.m in Sources */,
 				3388003C1D4847920048AD47 /* EncryptionPlistViewController.m in Sources */,
+				338800821D5060790048AD47 /* ProfileTableViewController.m in Sources */,
 				338800431D4847920048AD47 /* ValidationViewController.m in Sources */,
 				3388003A1D4847920048AD47 /* AlertViewController.m in Sources */,
 				338800411D4847920048AD47 /* ToastViewController.m in Sources */,

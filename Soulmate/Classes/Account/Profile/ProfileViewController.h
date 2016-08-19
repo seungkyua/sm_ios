@@ -9,6 +9,7 @@
 #import "BaseMainViewController.h"
 #import "Combo.h"
 #import "AutoResizeTextView.h"
+#import "Profile.h"
 
 @interface ProfileViewController : BaseMainViewController
 

@@ -23,8 +23,6 @@
     // Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    UIScrollView *sc = (UIScrollView *) self.view;
-    [sc setContentSize:CGSizeMake(DEVICE_SIZE.width, _bottomView.frame.origin.y + _bottomView.frame.size.height)];
     
     // imageView 터치 설정
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchFace)];
@@ -137,6 +135,14 @@
 }
 */
 
+- (void) getProfile {
+    
+}
+
+- (void) setProfile:(Profile *) profile {
+   
+}
+
 #pragma mark - FaceActionSheet
 
 - (void) touchFace {
@@ -191,6 +197,9 @@
     CGRect rect = _bottomView.frame;
     rect.origin.y = _textDescription.frame.origin.y + _textDescription.frame.size.height;
     _bottomView.frame = rect;
+    
+    UIScrollView *sc = (UIScrollView *) self.view;
+    [sc setContentSize:CGSizeMake(DEVICE_SIZE.width, _bottomView.frame.origin.y + _bottomView.frame.size.height)];
     
     [self.view layoutSubviews]; //이부분이 중요！
 }

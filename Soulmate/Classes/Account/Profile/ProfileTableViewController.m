@@ -330,10 +330,10 @@
             [comboCell.combo setData:_matchingInterestData];
         } else if ([@"matchingDate" isEqualToString:cellName]) {
             [comboCell.combo setValue:[CommonUtil findTextByData:_profile.matchingDate InArray:_matchingDateData]];
-            [comboCell.combo setData:_lastSchoolData];
+            [comboCell.combo setData:_matchingDateData];
         } else if ([@"interestSex" isEqualToString:cellName]) {
             [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestSex InArray:_interestSexData]];
-            [comboCell.combo setData:_areaData];
+            [comboCell.combo setData:_interestSexData];
         } else if ([@"interestMarriage" isEqualToString:cellName]) {
             [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestMarriage InArray:_interestMarriageData]];
             [comboCell.combo setData:_interestMarriageData];

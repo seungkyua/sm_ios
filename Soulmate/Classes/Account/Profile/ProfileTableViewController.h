@@ -10,4 +10,5 @@
 
 @interface ProfileTableViewController : UITableViewController
 
+- (IBAction)touchBtnSave:(id)sender;
 @end

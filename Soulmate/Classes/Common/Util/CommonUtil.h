@@ -18,9 +18,13 @@
 
 + (NSString *) ArrayToJsonString:(NSMutableArray *) object;
 
++ (NSInteger) findIndexByText:(NSString *) text InArray:(NSMutableArray *) array;
+
 + (id) findDataByText:(NSString *) text InArray:(NSMutableArray *) array;
 
 + (id) findRowByText:(NSString *) text InArray:(NSMutableArray *) array;
+
++ (NSInteger) findIndexByData:(NSString *) data InArray:(NSMutableArray *) array;
 
 + (id) findTextByData:(NSString *) data InArray:(NSMutableArray *) array;
     

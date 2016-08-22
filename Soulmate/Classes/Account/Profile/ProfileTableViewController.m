@@ -14,6 +14,7 @@
 #import "ProfileTableViewTextFieldCell.h"
 #import "Profile.h"
 #import "CommonUtil.h"
+#import "ProfileTextViewDetailViewController.h"
 #import <Canape/Canape.h>
 
 #define CELL_TYPE_SUB_TITLE @"subTitle"
@@ -96,7 +97,8 @@
           @"name" : @"subTitle2",
           @"title" : NSLocalizedString(@"account.profile.sub.title2", nil),
           @"description" : NSLocalizedString(@"account.profile.sub.description2", nil)},
-        @{@"type" : CELL_TYPE_TEXT_VIEW},
+        @{@"type" : CELL_TYPE_TEXT_VIEW,
+          @"name" : @"selfDesc"},
         
         @{@"type" : CELL_TYPE_SUB_TITLE,
           @"name" : @"subTitle3",
@@ -234,6 +236,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -275,6 +283,14 @@
         NSString *cellName = [rowData objectForKey:@"name"];
         if ([@"nick" isEqualToString:cellName]) {
             [textFieldCell.textField setText:_profile.nickName];
+        } else if ([@"name" isEqualToString:cellName]) {
+            [textFieldCell.textField setText:_profile.name];
+        } else if ([@"university" isEqualToString:cellName]) {
+            [textFieldCell.textField setText:_profile.universityName];
+        } else if ([@"graduate" isEqualToString:cellName]) {
+            [textFieldCell.textField setText:_profile.graduateSchoolName];
+        } else if ([@"companyName" isEqualToString:cellName]) {
+            [textFieldCell.textField setText:_profile.companyName];
         }
         
         cell = textFieldCell;
@@ -372,7 +388,7 @@
     NSString *type = [rowData objectForKey:@"type"];
     
     if ([CELL_TYPE_SUB_TITLE isEqualToString:type]) {
-        return 88;
+        return UITableViewAutomaticDimension;
     } else if ([CELL_TYPE_IMAGE_VIEW isEqualToString:type]) {
         return UITableViewAutomaticDimension;
     } else if ([CELL_TYPE_TEXT_VIEW isEqualToString:type]) {
@@ -451,6 +467,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - prepareForSegue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[ProfileTextViewDetailViewController class]]) {
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSString *type = [_tableData objectAtIndex:selectedIndexPath.row][@"name"];
+        ProfileTextViewDetailViewController *dest = segue.destinationViewController;
+        [dest setProfile:_profile];
+        [dest setType:type];
+    }
+}
 
 #pragma mark - ComboDelegate
 
@@ -548,4 +577,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)touchBtnSave:(id)sender {
+    NSLog(@"%@", [_profile getProfileJsonString]);
+}
 @end

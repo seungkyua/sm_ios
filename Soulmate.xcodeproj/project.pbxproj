@@ -46,6 +46,7 @@
 		338800851D5060790048AD47 /* ProfileTableViewTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388007D1D5060790048AD47 /* ProfileTableViewTextFieldCell.m */; };
 		338800861D5060790048AD47 /* ProfileTableViewTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388007F1D5060790048AD47 /* ProfileTableViewTextViewCell.m */; };
 		3388008A1D669C7E0048AD47 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800891D669C7E0048AD47 /* CommonUtil.m */; };
+		3388008D1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,8 @@
 		3388007F1D5060790048AD47 /* ProfileTableViewTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewTextViewCell.m; path = Classes/Account/Profile/ProfileTableViewTextViewCell.m; sourceTree = "<group>"; };
 		338800881D669C7E0048AD47 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonUtil.h; path = Classes/Common/Util/CommonUtil.h; sourceTree = "<group>"; };
 		338800891D669C7E0048AD47 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonUtil.m; path = Classes/Common/Util/CommonUtil.m; sourceTree = "<group>"; };
+		3388008B1D6AE1230048AD47 /* ProfileTextViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTextViewDetailViewController.h; path = Classes/Account/Profile/Detail/ProfileTextViewDetailViewController.h; sourceTree = "<group>"; };
+		3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTextViewDetailViewController.m; path = Classes/Account/Profile/Detail/ProfileTextViewDetailViewController.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,6 +252,7 @@
 		338165011D4729840025752C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3388008E1D6AE1270048AD47 /* Detail */,
 				338800721D5060790048AD47 /* ProfileTableViewComboCell.h */,
 				338800731D5060790048AD47 /* ProfileTableViewComboCell.m */,
 				338800761D5060790048AD47 /* ProfileTableViewController.h */,
@@ -348,6 +352,15 @@
 				338800891D669C7E0048AD47 /* CommonUtil.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		3388008E1D6AE1270048AD47 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3388008B1D6AE1230048AD47 /* ProfileTextViewDetailViewController.h */,
+				3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		3B45ABD63C64DADF6DDE7D2D /* Pods */ = {
@@ -481,6 +494,7 @@
 				338800461D4847920048AD47 /* ViewPagerViewController.m in Sources */,
 				338800421D4847920048AD47 /* TokenViewController.m in Sources */,
 				338164E31D4726D20025752C /* AppDelegate.m in Sources */,
+				3388008D1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m in Sources */,
 				338800861D5060790048AD47 /* ProfileTableViewTextViewCell.m in Sources */,
 				338164E01D4726D20025752C /* main.m in Sources */,
 				338800841D5060790048AD47 /* ProfileTableViewSubTitleCell.m in Sources */,

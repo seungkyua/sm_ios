@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSMutableArray *faceImageList;
 @property (nonatomic, strong) NSString *selfDesc;
 @property (nonatomic, strong) NSString *nickName;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *sex;
 @property (nonatomic, strong) NSString *age;
 @property (nonatomic, strong) NSString *bodyShape;

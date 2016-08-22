@@ -72,6 +72,17 @@
     }
 }
 
++ (NSInteger) findIndexByText:(NSString *) text InArray:(NSMutableArray *) array {
+    for (NSInteger i = 0; i < array.count; i++) {
+        id obj = [array objectAtIndex:i];
+        if ([[obj objectForKey:@"text"] isEqual:text]) {
+            return i;
+        }
+    }
+    
+    return -1;
+}
+
 + (id) findDataByText:(NSString *) text InArray:(NSMutableArray *) array {
     return [[self findRowByText:text InArray:array] objectForKey:@"data"];
 }
@@ -85,6 +96,17 @@
     }
     
     return nil;
+}
+
++ (NSInteger) findIndexByData:(NSString *) data InArray:(NSMutableArray *) array {
+    for (NSInteger i = 0; i < array.count; i++) {
+        id obj = [array objectAtIndex:i];
+        if ([[obj objectForKey:@"data"] isEqual:data]) {
+            return i;
+        }
+    }
+    
+    return -1;
 }
 
 + (id) findTextByData:(NSString *) data InArray:(NSMutableArray *) array {

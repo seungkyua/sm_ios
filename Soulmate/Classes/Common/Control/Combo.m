@@ -7,6 +7,7 @@
 //
 
 #import "Combo.h"
+#import "CommonUtil.h"
 #import <Canape/Canape.h>
 
 #define DEFAULT_HEIGHT 200
@@ -89,6 +90,9 @@
 - (void) showCombo {
     [_pickerContiner setHidden:NO];
     
+    [picker selectRow:[CommonUtil findIndexByText:self.value InArray:self.data]
+          inComponent:0
+             animated:YES];
     [CPHelper popupView:_pickerContiner withType:POPUP_TYPE_DEFAULT];
 }
 

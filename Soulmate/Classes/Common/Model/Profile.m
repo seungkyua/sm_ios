@@ -51,6 +51,7 @@
     _userId = profileData[@"id"];
     _selfDesc = profileData[@"self_desc"];
     _nickName = profileData[@"nick_name"];
+    _name = profileData[@"name"];
     _sex = profileData[@"sex"];
     _age = profileData[@"age"];
     _bodyShape = profileData[@"body_shape"];
@@ -92,6 +93,7 @@
     profileData[@"id"] = _userId;
     profileData[@"self_desc"] = _selfDesc;
     profileData[@"nick_name"] = _nickName;
+    profileData[@"name"] = _name;
     profileData[@"sex"] = _sex;
     profileData[@"age"] = _age;
     profileData[@"body_shape"] = _bodyShape;

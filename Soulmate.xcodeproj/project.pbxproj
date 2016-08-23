@@ -47,6 +47,8 @@
 		338800861D5060790048AD47 /* ProfileTableViewTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388007F1D5060790048AD47 /* ProfileTableViewTextViewCell.m */; };
 		3388008A1D669C7E0048AD47 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800891D669C7E0048AD47 /* CommonUtil.m */; };
 		3388008D1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */; };
+		338800911D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800901D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m */; };
+		338800941D6BE94A0048AD47 /* ProfileTextDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800931D6BE94A0048AD47 /* ProfileTextDetailViewController.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,10 @@
 		338800891D669C7E0048AD47 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonUtil.m; path = Classes/Common/Util/CommonUtil.m; sourceTree = "<group>"; };
 		3388008B1D6AE1230048AD47 /* ProfileTextViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTextViewDetailViewController.h; path = Classes/Account/Profile/Detail/ProfileTextViewDetailViewController.h; sourceTree = "<group>"; };
 		3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTextViewDetailViewController.m; path = Classes/Account/Profile/Detail/ProfileTextViewDetailViewController.m; sourceTree = "<group>"; };
+		3388008F1D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTextFieldDetailViewController.h; path = Classes/Account/Profile/Detail/ProfileTextFieldDetailViewController.h; sourceTree = "<group>"; };
+		338800901D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTextFieldDetailViewController.m; path = Classes/Account/Profile/Detail/ProfileTextFieldDetailViewController.m; sourceTree = "<group>"; };
+		338800921D6BE94A0048AD47 /* ProfileTextDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTextDetailViewController.h; path = Classes/Account/Profile/Detail/ProfileTextDetailViewController.h; sourceTree = "<group>"; };
+		338800931D6BE94A0048AD47 /* ProfileTextDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTextDetailViewController.m; path = Classes/Account/Profile/Detail/ProfileTextDetailViewController.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -357,6 +363,10 @@
 		3388008E1D6AE1270048AD47 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				338800921D6BE94A0048AD47 /* ProfileTextDetailViewController.h */,
+				338800931D6BE94A0048AD47 /* ProfileTextDetailViewController.m */,
+				3388008F1D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.h */,
+				338800901D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m */,
 				3388008B1D6AE1230048AD47 /* ProfileTextViewDetailViewController.h */,
 				3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */,
 			);
@@ -502,6 +512,7 @@
 				338800391D4847920048AD47 /* ActionSheetViewController.m in Sources */,
 				338800801D5060790048AD47 /* ProfileTableViewComboCell.m in Sources */,
 				338164FB1D4729360025752C /* HomeViewController.m in Sources */,
+				338800911D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m in Sources */,
 				3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */,
 				338165071D4729EC0025752C /* LoginViewController.m in Sources */,
 				3388005C1D4F41C20048AD47 /* Profile.m in Sources */,
@@ -518,6 +529,7 @@
 				3388003D1D4847920048AD47 /* LoaderViewController.m in Sources */,
 				3388003C1D4847920048AD47 /* EncryptionPlistViewController.m in Sources */,
 				338800821D5060790048AD47 /* ProfileTableViewController.m in Sources */,
+				338800941D6BE94A0048AD47 /* ProfileTextDetailViewController.m in Sources */,
 				338800431D4847920048AD47 /* ValidationViewController.m in Sources */,
 				3388003A1D4847920048AD47 /* AlertViewController.m in Sources */,
 				338800411D4847920048AD47 /* ToastViewController.m in Sources */,

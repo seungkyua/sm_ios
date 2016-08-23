@@ -14,7 +14,7 @@
 #import "ProfileTableViewTextFieldCell.h"
 #import "Profile.h"
 #import "CommonUtil.h"
-#import "ProfileTextViewDetailViewController.h"
+#import "ProfileTextDetailViewController.h"
 #import <Canape/Canape.h>
 
 #define CELL_TYPE_SUB_TITLE @"subTitle"
@@ -82,6 +82,7 @@
           @"description" : NSLocalizedString(@"account.profile.sub.description1", nil)},
         @{@"type" : CELL_TYPE_TEXT_FIELD,
           @"name" : @"nick",
+          @"limit" : @20,
           @"title" : NSLocalizedString(@"account.profile.nick.title", nil)},
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"sex",
@@ -98,7 +99,9 @@
           @"title" : NSLocalizedString(@"account.profile.sub.title2", nil),
           @"description" : NSLocalizedString(@"account.profile.sub.description2", nil)},
         @{@"type" : CELL_TYPE_TEXT_VIEW,
-          @"name" : @"selfDesc"},
+          @"name" : @"selfDesc",
+          @"title" : NSLocalizedString(@"account.profile.self.desc.title", nil),
+          @"limit" : @100},
         
         @{@"type" : CELL_TYPE_SUB_TITLE,
           @"name" : @"subTitle3",
@@ -260,7 +263,7 @@
     
     if ([CELL_TYPE_SUB_TITLE isEqualToString:type]) {
         ProfileTableViewSubTitleCell *subTitleCell = [tableView dequeueReusableCellWithIdentifier:@"subTitleCell" forIndexPath:indexPath];
-        [subTitleCell.labelSubTitle setText:[rowData objectForKey:@"title"]];
+        [subTitleCell.labelSubTitle setText:[NSString stringWithFormat:@"%@ :", [rowData objectForKey:@"title"]]];
         [subTitleCell.textDescription setText:[rowData objectForKey:@"description"]];
         
         cell = subTitleCell;
@@ -278,7 +281,7 @@
         cell = textViewCell;
     } else if ([CELL_TYPE_TEXT_FIELD isEqualToString:type]) {
         ProfileTableViewTextFieldCell *textFieldCell = [tableView dequeueReusableCellWithIdentifier:@"textFieldCell" forIndexPath:indexPath];
-        [textFieldCell.labelTitle setText:[rowData objectForKey:@"title"]];
+        [textFieldCell.labelTitle setText:[NSString stringWithFormat:@"%@ :", [rowData objectForKey:@"title"]]];
         
         NSString *cellName = [rowData objectForKey:@"name"];
         if ([@"nick" isEqualToString:cellName]) {
@@ -296,7 +299,7 @@
         cell = textFieldCell;
     } else if ([CELL_TYPE_COMBO isEqualToString:type]) {
         ProfileTableViewComboCell *comboCell = [tableView dequeueReusableCellWithIdentifier:@"comboCell" forIndexPath:indexPath];
-        [comboCell.labelTitle setText:[rowData objectForKey:@"title"]];
+        [comboCell.labelTitle setText:[NSString stringWithFormat:@"%@ :", [rowData objectForKey:@"title"]]];
         
         NSString *cellName = [rowData objectForKey:@"name"];
         if ([@"sex" isEqualToString:cellName]) {
@@ -471,12 +474,19 @@
 #pragma mark - prepareForSegue
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.destinationViewController isKindOfClass:[ProfileTextViewDetailViewController class]]) {
+    if ([segue.destinationViewController isKindOfClass:[ProfileTextDetailViewController class]]) {
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         
         NSString *type = [_tableData objectAtIndex:selectedIndexPath.row][@"name"];
-        ProfileTextViewDetailViewController *dest = segue.destinationViewController;
+        NSNumber *limit = [_tableData objectAtIndex:selectedIndexPath.row][@"limit"];
+        NSString *title = [_tableData objectAtIndex:selectedIndexPath.row][@"title"];
+        
+        ProfileTextDetailViewController *dest = segue.destinationViewController;
         [dest setProfile:_profile];
+        [dest setTitle:title];
+        if (limit != nil) {
+            [dest setLimitBytes:[limit intValue]];
+        }
         [dest setType:type];
     }
 }

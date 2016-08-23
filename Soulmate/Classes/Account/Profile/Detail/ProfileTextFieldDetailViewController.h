@@ -8,10 +8,10 @@
 
 #import "ProfileTextDetailViewController.h"
 
-@interface ProfileTextViewDetailViewController : ProfileTextDetailViewController
+@interface ProfileTextFieldDetailViewController : ProfileTextDetailViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnComplete;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *labelLimit;
 
 - (IBAction)touchBtnComplete:(id)sender;

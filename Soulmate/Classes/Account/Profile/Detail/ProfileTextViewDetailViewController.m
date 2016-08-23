@@ -8,7 +8,7 @@
 
 #import "ProfileTextViewDetailViewController.h"
 
-@interface ProfileTextViewDetailViewController ()
+@interface ProfileTextViewDetailViewController () <UITextViewDelegate>
 
 @end
 
@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    _textView.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -27,18 +30,17 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if ([@"selfDesc" isEqualToString:_type]) {
-        [_textView setText:_profile.selfDesc];
-    } else if ([@"nick" isEqualToString:_type]) {
-        [_textView setText:_profile.nickName];
-    } else if ([@"name" isEqualToString:_type]) {
-        [_textView setText:_profile.name];
-    } else if ([@"university" isEqualToString:_type]) {
-        [_textView setText:_profile.universityName];
-    } else if ([@"graduate" isEqualToString:_type]) {
-        [_textView setText:_profile.graduateSchoolName];
-    } else if ([@"companyName" isEqualToString:_type]) {
-        [_textView setText:_profile.companyName];
+    if ([@"selfDesc" isEqualToString:self.type]) {
+        [_textView setText:self.profile.selfDesc];
+    } 
+    
+    [self highlightBtn];
+    [_textView becomeFirstResponder];
+    if (self.limitBytes == 0) {
+        [_labelLimit setHidden:YES];
+    } else {
+        [self setTextLimit];
+        [_labelLimit setHidden:NO];
     }
 }
 
@@ -52,20 +54,41 @@
 }
 */
 
+- (void) highlightBtn {
+    if ([_textView.text isEqualToString:@""]) {
+        _btnComplete.enabled = NO;
+    } else {
+        _btnComplete.enabled = YES;
+    }
+}
+
+- (void) setTextLimit {
+    NSString *t = @"";
+    t = [NSString stringWithFormat:@"%ld / %ld bytes", [_textView.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding], (long)self.limitBytes];
+    [_labelLimit setText:t];
+}
+
+#pragma mark - UITextViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView {
+    [self highlightBtn];
+    [self setTextLimit];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if (self.limitBytes > 0) {
+        return [_textView.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + ([text lengthOfBytesUsingEncoding:NSUTF8StringEncoding] - range.length) <= self.limitBytes;
+    } else {
+        return YES;
+    }
+}
+
+#pragma mark - Event Handler
 
 - (IBAction)touchBtnComplete:(id)sender {
-    if ([@"selfDesc" isEqualToString:_type]) {
-        _profile.selfDesc = _textView.text;
-    } else if ([@"nick" isEqualToString:_type]) {
-        _profile.nickName = _textView.text;
-    } else if ([@"name" isEqualToString:_type]) {
-        _profile.name = _textView.text;
-    } else if ([@"university" isEqualToString:_type]) {
-        _profile.universityName = _textView.text;
-    } else if ([@"graduate" isEqualToString:_type]) {
-        _profile.graduateSchoolName = _textView.text;
-    } else if ([@"companyName" isEqualToString:_type]) {
-        _profile.companyName = _textView.text;
+    if ([@"selfDesc" isEqualToString:self.type]) {
+        self.profile.selfDesc = _textView.text;
     }
     
     [self.navigationController popViewControllerAnimated:YES];

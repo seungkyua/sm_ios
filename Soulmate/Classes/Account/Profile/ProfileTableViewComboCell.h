@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Combo.h"
+#import "Combo2.h"
 
 @interface ProfileTableViewComboCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-@property (weak, nonatomic) IBOutlet Combo *combo;
+@property (weak, nonatomic) IBOutlet Combo2 *combo;
 @end

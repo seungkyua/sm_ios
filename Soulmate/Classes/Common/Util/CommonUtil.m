@@ -84,14 +84,24 @@
 }
 
 + (id) findDataByText:(NSString *) text InArray:(NSMutableArray *) array {
-    return [[self findRowByText:text InArray:array] objectForKey:@"data"];
+    id obj = [self findRowByData:text InArray:array];
+    if ([obj isKindOfClass:[NSMutableDictionary class]] || [obj isKindOfClass:[NSMutableDictionary class]]) {
+        return [[self findRowByText:text InArray:array] objectForKey:@"data"];
+    } else {
+        return obj;
+    }
 }
 
 + (id) findRowByText:(NSString *) text InArray:(NSMutableArray *) array {
     for (id obj in array) {
-        if ([[obj objectForKey:@"text"] isEqual:text]) {
-            NSLog(@"text, data : %@, %@", [obj objectForKey:@"text"], [obj objectForKey:@"data"]);
-            return obj;
+        if ([obj isKindOfClass:[NSMutableDictionary class]] || [obj isKindOfClass:[NSMutableDictionary class]]) {
+            if ([[obj objectForKey:@"text"] isEqual:text]) {
+                return obj;
+            }
+        } else {
+            if ([obj isEqual:text]) {
+                return obj;
+            }
         }
     }
     
@@ -101,24 +111,42 @@
 + (NSInteger) findIndexByData:(NSString *) data InArray:(NSMutableArray *) array {
     for (NSInteger i = 0; i < array.count; i++) {
         id obj = [array objectAtIndex:i];
-        if ([[obj objectForKey:@"data"] isEqual:data]) {
-            return i;
+        if ([obj isKindOfClass:[NSMutableDictionary class]] || [obj isKindOfClass:[NSMutableDictionary class]]) {
+            if ([[obj objectForKey:@"data"] isEqual:data]) {
+                return i;
+            }
+        } else {
+            if ([obj isEqual:data]) {
+                return i;
+            }
         }
+        
     }
     
     return -1;
 }
 
 + (id) findTextByData:(NSString *) data InArray:(NSMutableArray *) array {
-    return [[self findRowByData:data InArray:array] objectForKey:@"text"];
+    id obj = [self findRowByData:data InArray:array];
+    if ([obj isKindOfClass:[NSMutableDictionary class]] || [obj isKindOfClass:[NSMutableDictionary class]]) {
+        return [[self findRowByData:data InArray:array] objectForKey:@"text"];
+    } else {
+        return obj;
+    }
 }
 
 + (id) findRowByData:(NSString *) data InArray:(NSMutableArray *) array {
     for (id obj in array) {
-        if ([[obj objectForKey:@"data"] isEqual:data]) {
-            NSLog(@"text, data : %@, %@", [obj objectForKey:@"text"], [obj objectForKey:@"data"]);
-            return obj;
+        if ([obj isKindOfClass:[NSMutableDictionary class]] || [obj isKindOfClass:[NSMutableDictionary class]]) {
+            if ([[obj objectForKey:@"data"] isEqual:data]) {
+                return obj;
+            }
+        } else {
+            if ([obj isEqual:data]) {
+                return obj;
+            }
         }
+        
     }
     
     return nil;

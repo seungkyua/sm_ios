@@ -17,7 +17,7 @@
     _sex = @"M";
     _age = @"1980";
     _bodyShape = @"A";
-    _bodyStyle = @"A";
+    _bodyStyle = @"ABC";
     _bloodType = @"A";
     _lastSchool = @"A";
     _bodyHeight = @"A";

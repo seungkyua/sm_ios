@@ -49,6 +49,8 @@
 		3388008D1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388008C1D6AE1230048AD47 /* ProfileTextViewDetailViewController.m */; };
 		338800911D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800901D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m */; };
 		338800941D6BE94A0048AD47 /* ProfileTextDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800931D6BE94A0048AD47 /* ProfileTextDetailViewController.m */; };
+		338800971D6C076B0048AD47 /* SelectList.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800961D6C076B0048AD47 /* SelectList.m */; };
+		3388009A1D6C17E80048AD47 /* Combo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800991D6C17E80048AD47 /* Combo2.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +137,10 @@
 		338800901D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTextFieldDetailViewController.m; path = Classes/Account/Profile/Detail/ProfileTextFieldDetailViewController.m; sourceTree = "<group>"; };
 		338800921D6BE94A0048AD47 /* ProfileTextDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTextDetailViewController.h; path = Classes/Account/Profile/Detail/ProfileTextDetailViewController.h; sourceTree = "<group>"; };
 		338800931D6BE94A0048AD47 /* ProfileTextDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTextDetailViewController.m; path = Classes/Account/Profile/Detail/ProfileTextDetailViewController.m; sourceTree = "<group>"; };
+		338800951D6C076B0048AD47 /* SelectList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectList.h; path = Classes/Common/Control/SelectList.h; sourceTree = "<group>"; };
+		338800961D6C076B0048AD47 /* SelectList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectList.m; path = Classes/Common/Control/SelectList.m; sourceTree = "<group>"; };
+		338800981D6C17E80048AD47 /* Combo2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Combo2.h; path = Classes/Common/Control/Combo2.h; sourceTree = "<group>"; };
+		338800991D6C17E80048AD47 /* Combo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Combo2.m; path = Classes/Common/Control/Combo2.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -334,10 +340,14 @@
 		3388004F1D4870CA0048AD47 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				338800981D6C17E80048AD47 /* Combo2.h */,
+				338800991D6C17E80048AD47 /* Combo2.m */,
 				338800501D4871070048AD47 /* Combo.h */,
 				338800511D4871070048AD47 /* Combo.m */,
 				338800561D4B1D2A0048AD47 /* AutoResizeTextView.h */,
 				338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */,
+				338800951D6C076B0048AD47 /* SelectList.h */,
+				338800961D6C076B0048AD47 /* SelectList.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -511,6 +521,7 @@
 				338800851D5060790048AD47 /* ProfileTableViewTextFieldCell.m in Sources */,
 				338800391D4847920048AD47 /* ActionSheetViewController.m in Sources */,
 				338800801D5060790048AD47 /* ProfileTableViewComboCell.m in Sources */,
+				338800971D6C076B0048AD47 /* SelectList.m in Sources */,
 				338164FB1D4729360025752C /* HomeViewController.m in Sources */,
 				338800911D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m in Sources */,
 				3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */,
@@ -521,6 +532,7 @@
 				3388003B1D4847920048AD47 /* ComboSample.m in Sources */,
 				338800451D4847920048AD47 /* ViewPagerSubViewController.m in Sources */,
 				338164FE1D47295E0025752C /* IntroViewController.m in Sources */,
+				3388009A1D6C17E80048AD47 /* Combo2.m in Sources */,
 				3388003F1D4847920048AD47 /* SelectableButtonViewController.m in Sources */,
 				338800831D5060790048AD47 /* ProfileTableViewImageViewCell.m in Sources */,
 				3388004E1D484C550048AD47 /* CanapeSampleViewController.m in Sources */,

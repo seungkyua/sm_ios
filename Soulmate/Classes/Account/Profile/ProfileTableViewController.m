@@ -24,7 +24,7 @@
 #define CELL_TYPE_COMBO @"combo"
 #define CELL_TYPE_COMBO2 @"combo2"
 
-@interface ProfileTableViewController () <CPActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, ComboDelegate, AutoResizeTextViewDelegate>
+@interface ProfileTableViewController () <ComboDelegate>
 
 @property (nonatomic, strong) NSMutableArray *tableData;
 @property (nonatomic, strong) Profile *profile;
@@ -75,6 +75,7 @@
     self.tableView.estimatedRowHeight = 44;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
+    // Table Layout 설정. name은 Profile의 속성명이랑 같아야 함
     _tableData = [[NSMutableArray alloc] initWithArray:@[
         @{@"type" : CELL_TYPE_SUB_TITLE,
           @"name" : @"subTitle1",
@@ -82,7 +83,7 @@
           @"description" : NSLocalizedString(@"account.profile.sub.description1", nil)},
         @{@"type" : CELL_TYPE_TEXT_FIELD,
           @"name" : @"nick",
-          @"limit" : @20,
+          @"limit" : @20,   // 최대 바이트 수
           @"title" : NSLocalizedString(@"account.profile.nick.title", nil)},
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"sex",
@@ -153,7 +154,9 @@
           @"title" : NSLocalizedString(@"account.profile.body.shape.title", nil)},
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"bodyStyle",
-          @"title" : NSLocalizedString(@"account.profile.body.style.title", nil)},
+          @"title" : NSLocalizedString(@"account.profile.body.style.title", nil),
+          @"multiSelectEnable" : @"Y",  // 다중 선택 허용
+          @"limit" : @3},               // 최대 선택 개수
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"bodyHeight",
           @"title" : NSLocalizedString(@"account.profile.body.height.title", nil)},
@@ -174,7 +177,9 @@
           @"title" : NSLocalizedString(@"account.profile.interest.age.gap.title", nil)},
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"interestStyle",
-          @"title" : NSLocalizedString(@"account.profile.interest.style.title", nil)},
+          @"title" : NSLocalizedString(@"account.profile.interest.style.title", nil),
+          @"multiSelectEnable" : @"Y",
+          @"limit" : @3},
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"interestBodyHeight",
           @"title" : NSLocalizedString(@"account.profile.interest.body.height.title", nil)},
@@ -195,11 +200,11 @@
     _profile = [[Profile alloc]init];
     
     // imageFace 터치 시 액션시트
-    _imageActionSheet = [[CPActionSheet alloc] initWithTitle:nil
-                                  otherButtonTitleArray:@[NSLocalizedString(@"account.profile.face.actionsheet.title1", nil),
-                                                          NSLocalizedString(@"account.profile.face.actionsheet.title2", nil),
-                                                          NSLocalizedString(@"account.profile.face.actionsheet.title3", nil)]
-                                      cancelButtonTitle:nil delegate:self];
+//    _imageActionSheet = [[CPActionSheet alloc] initWithTitle:nil
+//                                  otherButtonTitleArray:@[NSLocalizedString(@"account.profile.face.actionsheet.title1", nil),
+//                                                          NSLocalizedString(@"account.profile.face.actionsheet.title2", nil),
+//                                                          NSLocalizedString(@"account.profile.face.actionsheet.title3", nil)]
+//                                      cancelButtonTitle:nil delegate:self];
     
     _sexData = [CommonUtil JsonStringToArray:NSLocalizedString(@"account.profile.sex.data", nil)];
     
@@ -300,84 +305,30 @@
     } else if ([CELL_TYPE_COMBO isEqualToString:type]) {
         ProfileTableViewComboCell *comboCell = [tableView dequeueReusableCellWithIdentifier:@"comboCell" forIndexPath:indexPath];
         [comboCell.labelTitle setText:[NSString stringWithFormat:@"%@ :", [rowData objectForKey:@"title"]]];
+        [comboCell.combo setMultiSelectEnable:NO];
         
         NSString *cellName = [rowData objectForKey:@"name"];
-        if ([@"sex" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.sex InArray:_sexData]];
-            [comboCell.combo setData:_sexData];
-        } else if ([@"age" isEqualToString:cellName]) {
-            [comboCell.combo setValue:_profile.age];
-            [comboCell.combo setData:_ageData];
-        } else if ([@"area" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.area InArray:_areaData]];
-            [comboCell.combo setData:_areaData];
-        } else if ([@"lastSchool" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.lastSchool InArray:_lastSchoolData]];
-            [comboCell.combo setData:_lastSchoolData];
-        } else if ([@"job" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.job InArray:_jobData]];
-            [comboCell.combo setData:_jobData];
-        } else if ([@"income" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.income InArray:_incomeData]];
-            [comboCell.combo setData:_incomeData];
-        } else if ([@"bloodType" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.bloodType InArray:_bloodTypeData]];
-            [comboCell.combo setData:_bloodTypeData];
-        } else if ([@"smoking" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.smoking InArray:_smokingData]];
-            [comboCell.combo setData:_smokingData];
-        } else if ([@"drinking" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.drinking InArray:_drinkingData]];
-            [comboCell.combo setData:_drinkingData];
-        } else if ([@"religion" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.religion InArray:_religionData]];
-            [comboCell.combo setData:_religionData];
-        } else if ([@"marriage" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.marriage InArray:_marriageData]];
-            [comboCell.combo setData:_marriageData];
-        } else if ([@"bodyShape" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.bodyShape InArray:_bodyShapeData]];
-            [comboCell.combo setData:_bodyShapeData];
-        } else if ([@"bodyStyle" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.bodyStyle InArray:_bodyStyleData]];
-            [comboCell.combo setData:_bodyStyleData];
-        } else if ([@"bodyHeight" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.bodyHeight InArray:_bodyHeightData]];
-            [comboCell.combo setData:_bodyHeightData];
-        } else if ([@"matchingInterest" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.matchingInterest InArray:_matchingInterestData]];
-            [comboCell.combo setData:_matchingInterestData];
-        } else if ([@"matchingDate" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.matchingDate InArray:_matchingDateData]];
-            [comboCell.combo setData:_matchingDateData];
-        } else if ([@"interestSex" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestSex InArray:_interestSexData]];
-            [comboCell.combo setData:_interestSexData];
-        } else if ([@"interestMarriage" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestMarriage InArray:_interestMarriageData]];
-            [comboCell.combo setData:_interestMarriageData];
-        } else if ([@"interestAgeGap" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestAgeGap InArray:_interestAgeGapData]];
-            [comboCell.combo setData:_interestAgeGapData];
-        } else if ([@"interestStyle" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestStyle InArray:_interestStyleData]];
-            [comboCell.combo setData:_interestStyleData];
-        } else if ([@"interestBodyHeight" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestBodyHeight InArray:_interestBodyHeightData]];
-            [comboCell.combo setData:_interestBodyHeightData];
-        } else if ([@"interestBodyWeight" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestBodyWeight InArray:_interestBodyWeightData]];
-            [comboCell.combo setData:_interestBodyWeightData];
-        } else if ([@"interestReligion" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestReligion InArray:_interestReligionData]];
-            [comboCell.combo setData:_interestReligionData];
-        } else if ([@"interestDrinking" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestDrinking InArray:_interestDrinkingData]];
-            [comboCell.combo setData:_interestDrinkingData];
-        } else if ([@"interestSmoking" isEqualToString:cellName]) {
-            [comboCell.combo setValue:[CommonUtil findTextByData:_profile.interestSmoking InArray:_interestSmokingData]];
-            [comboCell.combo setData:_interestSmokingData];
+        
+        id data = [self valueForKey:[NSString stringWithFormat:@"%@Data", cellName]];
+        id profileProp = [_profile valueForKey:cellName];
+        
+        [comboCell.combo setTagString:cellName];
+        [comboCell.combo setData:data];
+        
+        if ([[rowData objectForKey:@"multiSelectEnable"] isEqualToString:@"Y"]) {
+            NSMutableArray *datas = [NSMutableArray array];
+            NSString *values = profileProp;
+            for (int i = 0; i < values.length; i++) {
+                [datas addObject:[NSString stringWithFormat: @"%C", [values characterAtIndex:i]]];
+            }
+            [comboCell.combo setMultiSelectEnable:YES];
+            [comboCell.combo setSelectedDatas:datas];
+            [comboCell.combo setLimitSelectCount:[[rowData objectForKey:@"limit"] intValue]];
+        } else {
+            [comboCell.combo setValue:[CommonUtil findTextByData:profileProp InArray:data]];
+            [comboCell.combo setSelectedData:profileProp];
         }
+        
         comboCell.combo.comboDelegate = self;
         
         cell = comboCell;
@@ -404,72 +355,28 @@
     return 44;
 }
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSMutableDictionary *rowData = [_tableData objectAtIndex:indexPath.row];
-    NSString *type = [rowData objectForKey:@"type"];
-    
-    if ([CELL_TYPE_IMAGE_VIEW isEqualToString:type]) {
-        [_imageActionSheet show];
-    }
-}
-
-- (void) changeHeightWithTextView:(AutoResizeTextView *)autoResizeTextView height:(double)height {
-    _profile.selfDesc = autoResizeTextView.text;
-    
-    [self.tableView reloadData];
-    
-    [self performSelector:@selector(deleayMethod:)
-               withObject:autoResizeTextView
-               afterDelay:0.1];
-}
-
-- (void) deleayMethod:(UITextView *) textView {
-    [textView becomeFirstResponder];
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSMutableDictionary *rowData = [_tableData objectAtIndex:indexPath.row];
+//    NSString *type = [rowData objectForKey:@"type"];
+//    
+//    if ([CELL_TYPE_IMAGE_VIEW isEqualToString:type]) {
+//        [_imageActionSheet show];
+//    }
+//}
+//
+//- (void) changeHeightWithTextView:(AutoResizeTextView *)autoResizeTextView height:(double)height {
+//    _profile.selfDesc = autoResizeTextView.text;
+//    
+//    [self.tableView reloadData];
+//    
+//    [self performSelector:@selector(deleayMethod:)
+//               withObject:autoResizeTextView
+//               afterDelay:0.1];
+//}
+//
+//- (void) deleayMethod:(UITextView *) textView {
+//    [textView becomeFirstResponder];
+//}
 
 #pragma mark - prepareForSegue
 
@@ -493,99 +400,60 @@
 
 #pragma mark - ComboDelegate
 
-- (void) combo:(Combo *)combo text:(NSString *)text data:(NSString *)data {
+- (void) combo:(Combo2 *)combo text:(NSString *)text data:(NSString *)data {
     
-    if ([combo.data isEqual:_sexData]) {
-        _profile.sex = data;
-    } else if ([combo.data isEqual:_bodyShapeData]) {
-        _profile.bodyShape = data;
-    } else if ([combo.data isEqual:_ageData]) {
-        _profile.age = data;
-    } else if ([combo.data isEqual:_bodyStyleData]) {
-        _profile.bodyStyle = data;
-    } else if ([combo.data isEqual:_bloodTypeData]) {
-        _profile.bloodType = data;
-    } else if ([combo.data isEqual:_lastSchoolData]) {
-        _profile.lastSchool = data;
-    } else if ([combo.data isEqual:_bodyHeightData]) {
-        _profile.bodyHeight = data;
-    } else if ([combo.data isEqual:_areaData]) {
-        _profile.area = data;
-    } else if ([combo.data isEqual:_smokingData]) {
-        _profile.smoking = data;
-    } else if ([combo.data isEqual:_drinkingData]) {
-        _profile.drinking = data;
-    } else if ([combo.data isEqual:_marriageData]) {
-        _profile.marriage = data;
-    } else if ([combo.data isEqual:_religionData]) {
-        _profile.religion = data;
-    } else if ([combo.data isEqual:_jobData]) {
-        _profile.job = data;
-    } else if ([combo.data isEqual:_incomeData]) {
-        _profile.income = data;
-    } else if ([combo.data isEqual:_matchingInterestData]) {
-        _profile.matchingInterest = data;
-    } else if ([combo.data isEqual:_matchingDateData]) {
-        _profile.matchingDate = data;
-    } else if ([combo.data isEqual:_interestSexData]) {
-        _profile.interestSex = data;
-    } else if ([combo.data isEqual:_interestMarriageData]) {
-        _profile.interestMarriage = data;
-    } else if ([combo.data isEqual:_interestAgeGapData]) {
-        _profile.interestAgeGap = data;
-    } else if ([combo.data isEqual:_interestAreaData]) {
-        _profile.interestArea = data;
-    } else if ([combo.data isEqual:_interestStyleData]) {
-        _profile.interestStyle = data;
-    } else if ([combo.data isEqual:_interestBodyHeightData]) {
-        _profile.interestBodyHeight = data;
-    } else if ([combo.data isEqual:_interestBodyWeightData]) {
-        _profile.interestBodyWeight = data;
-    } else if ([combo.data isEqual:_interestReligionData]) {
-        _profile.interestReligion = data;
-    } else if ([combo.data isEqual:_interestDrinkingData]) {
-        _profile.interestDrinking = data;
-    } else if ([combo.data isEqual:_interestSmokingData]) {
-        _profile.interestSmoking = data;
-    }
+    NSString *tag = combo.tagString;
+    [_profile setValue:data forKey:tag];
 }
-             
+
+- (void) combo:(Combo2 *)combo datas:(NSMutableArray *)datas {
+    
+    NSString *data = @"";
+    for (int i = 0; i < datas.count; i++) {
+        NSString *dataValue = [datas objectAtIndex:i][@"data"];
+        data = [NSString stringWithFormat:@"%@%@", data, dataValue];
+    }
+    
+    NSString *tag = combo.tagString;
+    [_profile setValue:data forKey:tag];
+}
+
 #pragma mark - FaceActionSheet
 
-- (void) actionSheet:(CPActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    [imagePicker setDelegate:self];
-    [imagePicker setAllowsEditing:YES];
-    
-    if (buttonIndex == 0) {
-        // 앨범에서 선택
-        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-        
-        [self presentViewController:imagePicker animated:YES completion:nil];
-    } else if (buttonIndex == 1) {
-        // 포스팅에서 불러오기
-    } else {
-        // 촬영으로 선택
-        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
-        
-        [self presentViewController:imagePicker animated:YES completion:nil];
-    }
-}
-
-- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    UIImage *img = [info objectForKey:UIImagePickerControllerEditedImage];
-    if(!img) img = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    _profile.faceImage = img;
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.tableView reloadData];
-}
-
-- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (void) actionSheet:(CPActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    
+//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+//    [imagePicker setDelegate:self];
+//    [imagePicker setAllowsEditing:YES];
+//    
+//    if (buttonIndex == 0) {
+//        // 앨범에서 선택
+//        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+//        
+//        [self presentViewController:imagePicker animated:YES completion:nil];
+//    } else if (buttonIndex == 1) {
+//        // 포스팅에서 불러오기
+//    } else {
+//        // 촬영으로 선택
+//        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+//        
+//        [self presentViewController:imagePicker animated:YES completion:nil];
+//    }
+//}
+//
+//- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+//    UIImage *img = [info objectForKey:UIImagePickerControllerEditedImage];
+//    if(!img) img = [info objectForKey:UIImagePickerControllerOriginalImage];
+//    
+//    _profile.faceImage = img;
+//    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self.tableView reloadData];
+//}
+//
+//- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 - (IBAction)touchBtnSave:(id)sender {
     NSLog(@"%@", [_profile getProfileJsonString]);

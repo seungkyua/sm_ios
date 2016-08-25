@@ -8,7 +8,11 @@
 
 #import "LoginViewController.h"
 
+
 @interface LoginViewController ()
+
+@property (nonatomic, strong) CPValidationForm *validForm;
+@property (nonatomic, strong) CPSelectableButtonGroup *group;
 
 @end
 
@@ -16,7 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _validForm = [[CPValidationForm alloc] init];
+    
+    // 유효성 체크할 Validater 추가
+    [_validForm addValidater:[[CPTextFieldValidater alloc] initWithControl:_textUserId                  // 체크할 컨트롤
+                                                               errorLabel:_textUserId.errorLabel        // 에러 표시할 Label
+                                                           validationType:VALIDATION_TYPE_EMAIL         // 체크할 타입
+                                                               isRealtime:NO]];                         // 실시간으로 체크할 것인지 여부
+    
+    _group = [[CPSelectableButtonGroup alloc] init];
+    _group.isMultiSelectionEnable = YES;
+    [_group addButton:_btnAutoLogin];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +50,23 @@
 }
 */
 
+- (IBAction)touchBtnLogin:(id)sender {
+    BOOL result = [_validForm validation];
+    
+    NSLog(@"%s", result ? "true" : "false");
+    
+    if (result) {
+        [self performSegueWithIdentifier:@"goHomeFromLogin" sender:self];
+    }
+}
+
+- (IBAction)touchBtnFindPw:(id)sender {
+}
+
+- (IBAction)touchBtnJoin:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Join" bundle:[NSBundle mainBundle]];
+    UINavigationController *navi = [storyboard instantiateViewControllerWithIdentifier:@"joinNavi"];
+    
+    [self presentViewController:navi animated:TRUE completion:nil];
+}
 @end

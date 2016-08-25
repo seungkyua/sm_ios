@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>USER_ID</key>
-	<string>test</string>
+	<string></string>
 	<key>APP_VERSION</key>
 	<string>0.0.1</string>
 	<key>RESET_YN</key>
 	<true/>
 	<key>VERSION</key>
-	<string>0.0.1</string>
+	<string>0.0.12</string>
 </dict>
 </plist>

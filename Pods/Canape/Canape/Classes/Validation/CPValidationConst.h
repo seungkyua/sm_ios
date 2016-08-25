@@ -26,7 +26,7 @@
 
 #define VALIDATION_REX_NUMERIC @"^[1-9\\s]*$"
 #define VALIDATION_REX_PHONE_NUMBER @"^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$"
-#define VALIDATION_REX_EMAIL @"^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$"
+#define VALIDATION_REX_EMAIL @"^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
 #define VALIDATION_REX_ENGLISH @"^[a-zA-Z\\s]*$"
 #define VALIDATION_REX_ENGLISH_NUMERIC @"^[1-9a-zA-Z\\s]*$"
 

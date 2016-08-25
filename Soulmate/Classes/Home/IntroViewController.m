@@ -24,14 +24,14 @@
     _settingPlist = [[PlistManager sharedInstance] getPlist:PLIST_TYPE_SETTING];
     NSString *userId = [_settingPlist objectForKey:@"USER_ID"];
     if ([userId isEqualToString:@""]) {
-        [self performSelector:@selector(goLogin) withObject:nil afterDelay:1.0];
+        [self performSelector:@selector(goGuide) withObject:nil afterDelay:1.0];
     } else {
         [self performSelector:@selector(goHome) withObject:nil afterDelay:1.0];
     }
 }
 
-- (void) goLogin {
-    [self performSegueWithIdentifier:@"goLogin" sender:self];
+- (void) goGuide {
+    [self performSegueWithIdentifier:@"goGuide" sender:self];
 }
 
 - (void) goHome {

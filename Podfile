@@ -6,5 +6,7 @@ pod 'Canape'
 pod 'TPKeyboardAvoiding', '~> 1.3'
 pod 'UITextView+PlaceholderExt'
 pod 'AFNetworking', '~> 3.0'
+pod 'KIImagePager', '~> 2.1'
+pod 'MLPAutoCompleteTextField', '~> 1.5'
 end
 

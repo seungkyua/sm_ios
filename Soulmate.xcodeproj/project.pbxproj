@@ -51,6 +51,9 @@
 		338800941D6BE94A0048AD47 /* ProfileTextDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800931D6BE94A0048AD47 /* ProfileTextDetailViewController.m */; };
 		338800971D6C076B0048AD47 /* SelectList.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800961D6C076B0048AD47 /* SelectList.m */; };
 		3388009A1D6C17E80048AD47 /* Combo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800991D6C17E80048AD47 /* Combo2.m */; };
+		3388009D1D6E7B370048AD47 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388009C1D6E7B370048AD47 /* GuideViewController.m */; };
+		3388009F1D6E90A10048AD47 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3388009E1D6E90A10048AD47 /* Join.storyboard */; };
+		338800A21D6EDD500048AD47 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 338800A11D6EDD500048AD47 /* ValidateTextField.m */; };
 		CB4D68272876320866B33597 /* libPods-Soulmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +144,11 @@
 		338800961D6C076B0048AD47 /* SelectList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectList.m; path = Classes/Common/Control/SelectList.m; sourceTree = "<group>"; };
 		338800981D6C17E80048AD47 /* Combo2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Combo2.h; path = Classes/Common/Control/Combo2.h; sourceTree = "<group>"; };
 		338800991D6C17E80048AD47 /* Combo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Combo2.m; path = Classes/Common/Control/Combo2.m; sourceTree = "<group>"; };
+		3388009B1D6E7B370048AD47 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuideViewController.h; path = Classes/Account/GuideViewController.h; sourceTree = "<group>"; };
+		3388009C1D6E7B370048AD47 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GuideViewController.m; path = Classes/Account/GuideViewController.m; sourceTree = "<group>"; };
+		3388009E1D6E90A10048AD47 /* Join.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Join.storyboard; path = Storyboards/Join.storyboard; sourceTree = "<group>"; };
+		338800A01D6EDD500048AD47 /* ValidateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValidateTextField.h; path = Classes/Common/Control/ValidateTextField.h; sourceTree = "<group>"; };
+		338800A11D6EDD500048AD47 /* ValidateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValidateTextField.m; path = Classes/Common/Control/ValidateTextField.m; sourceTree = "<group>"; };
 		90B7BA5C150A7094D5D743F4 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
 		970DDAE8515BE9CF68632053 /* libPods-Soulmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Soulmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -219,6 +227,8 @@
 				338165011D4729840025752C /* Profile */,
 				338165001D47297C0025752C /* Join */,
 				338164FF1D4729760025752C /* Login */,
+				3388009B1D6E7B370048AD47 /* GuideViewController.h */,
+				3388009C1D6E7B370048AD47 /* GuideViewController.m */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -287,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				3388001B1D4846C00048AD47 /* Canape.storyboard */,
+				3388009E1D6E90A10048AD47 /* Join.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -348,6 +359,8 @@
 				338800571D4B1D2A0048AD47 /* AutoResizeTextView.m */,
 				338800951D6C076B0048AD47 /* SelectList.h */,
 				338800961D6C076B0048AD47 /* SelectList.m */,
+				338800A01D6EDD500048AD47 /* ValidateTextField.h */,
+				338800A11D6EDD500048AD47 /* ValidateTextField.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -461,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				338164EE1D4726D20025752C /* LaunchScreen.storyboard in Resources */,
+				3388009F1D6E90A10048AD47 /* Join.storyboard in Resources */,
 				338800151D483EB40048AD47 /* Localizable.strings in Resources */,
 				3381650F1D472BBE0025752C /* SSO.plist in Resources */,
 				3381650D1D472BB10025752C /* Setting.plist in Resources */,
@@ -526,6 +540,7 @@
 				338800911D6BE4BC0048AD47 /* ProfileTextFieldDetailViewController.m in Sources */,
 				3388004A1D484B430048AD47 /* BaseMainViewController.m in Sources */,
 				338165071D4729EC0025752C /* LoginViewController.m in Sources */,
+				338800A21D6EDD500048AD47 /* ValidateTextField.m in Sources */,
 				3388005C1D4F41C20048AD47 /* Profile.m in Sources */,
 				3388008A1D669C7E0048AD47 /* CommonUtil.m in Sources */,
 				338165041D4729D50025752C /* ProfileViewController.m in Sources */,
@@ -540,6 +555,7 @@
 				338800581D4B1D2A0048AD47 /* AutoResizeTextView.m in Sources */,
 				3388003D1D4847920048AD47 /* LoaderViewController.m in Sources */,
 				3388003C1D4847920048AD47 /* EncryptionPlistViewController.m in Sources */,
+				3388009D1D6E7B370048AD47 /* GuideViewController.m in Sources */,
 				338800821D5060790048AD47 /* ProfileTableViewController.m in Sources */,
 				338800941D6BE94A0048AD47 /* ProfileTextDetailViewController.m in Sources */,
 				338800431D4847920048AD47 /* ValidationViewController.m in Sources */,

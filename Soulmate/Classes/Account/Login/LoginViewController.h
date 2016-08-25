@@ -7,7 +7,15 @@
 //
 
 #import "BaseMainViewController.h"
+#import "ValidateTextField.h"
+#import <Canape/Canape.h>
 
 @interface LoginViewController : BaseMainViewController
 
+@property (weak, nonatomic) IBOutlet ValidateTextField *textUserId;
+@property (weak, nonatomic) IBOutlet UITextField *textPw;
+@property (weak, nonatomic) IBOutlet CPSelectableButton *btnAutoLogin;
+- (IBAction)touchBtnLogin:(id)sender;
+- (IBAction)touchBtnFindPw:(id)sender;
+- (IBAction)touchBtnJoin:(id)sender;
 @end

@@ -14,61 +14,67 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Canape (0.1.0):
-    - Canape/ActionSheet (= 0.1.0)
-    - Canape/Alert (= 0.1.0)
-    - Canape/BaseController (= 0.1.0)
-    - Canape/Category (= 0.1.0)
-    - Canape/Combo (= 0.1.0)
-    - Canape/Common (= 0.1.0)
-    - Canape/Encryption (= 0.1.0)
-    - Canape/Hybrid (= 0.1.0)
-    - Canape/Loader (= 0.1.0)
-    - Canape/PlistManager (= 0.1.0)
-    - Canape/SelectableButton (= 0.1.0)
-    - Canape/StackView (= 0.1.0)
-    - Canape/Toast (= 0.1.0)
-    - Canape/Token (= 0.1.0)
-    - Canape/Utils (= 0.1.0)
-    - Canape/Validation (= 0.1.0)
-    - Canape/ViewPager (= 0.1.0)
-  - Canape/ActionSheet (0.1.0):
+  - Canape (0.1.1):
+    - Canape/ActionSheet (= 0.1.1)
+    - Canape/Alert (= 0.1.1)
+    - Canape/BaseController (= 0.1.1)
+    - Canape/Category (= 0.1.1)
+    - Canape/Combo (= 0.1.1)
+    - Canape/Common (= 0.1.1)
+    - Canape/Encryption (= 0.1.1)
+    - Canape/Hybrid (= 0.1.1)
+    - Canape/Loader (= 0.1.1)
+    - Canape/PlistManager (= 0.1.1)
+    - Canape/SelectableButton (= 0.1.1)
+    - Canape/StackView (= 0.1.1)
+    - Canape/Toast (= 0.1.1)
+    - Canape/Token (= 0.1.1)
+    - Canape/Utils (= 0.1.1)
+    - Canape/Validation (= 0.1.1)
+    - Canape/ViewPager (= 0.1.1)
+  - Canape/ActionSheet (0.1.1):
     - Canape/Utils
-  - Canape/Alert (0.1.0):
+  - Canape/Alert (0.1.1):
     - Canape/Utils
-  - Canape/BaseController (0.1.0)
-  - Canape/Category (0.1.0)
-  - Canape/Combo (0.1.0)
-  - Canape/Common (0.1.0):
+  - Canape/BaseController (0.1.1)
+  - Canape/Category (0.1.1)
+  - Canape/Combo (0.1.1)
+  - Canape/Common (0.1.1):
     - Canape/Category
-  - Canape/Encryption (0.1.0)
-  - Canape/Hybrid (0.1.0):
+  - Canape/Encryption (0.1.1)
+  - Canape/Hybrid (0.1.1):
     - Canape/BaseController
-  - Canape/Loader (0.1.0)
-  - Canape/PlistManager (0.1.0):
+  - Canape/Loader (0.1.1)
+  - Canape/PlistManager (0.1.1):
     - Canape/Encryption
-  - Canape/SelectableButton (0.1.0)
-  - Canape/StackView (0.1.0)
-  - Canape/Toast (0.1.0):
+  - Canape/SelectableButton (0.1.1)
+  - Canape/StackView (0.1.1)
+  - Canape/Toast (0.1.1):
     - Canape/Common
-  - Canape/Token (0.1.0)
-  - Canape/Utils (0.1.0):
+  - Canape/Token (0.1.1)
+  - Canape/Utils (0.1.1):
     - Canape/Common
-  - Canape/Validation (0.1.0):
+  - Canape/Validation (0.1.1):
     - Canape/Combo
-  - Canape/ViewPager (0.1.0)
+  - Canape/ViewPager (0.1.1)
+  - KIImagePager (2.1.1)
+  - MLPAutoCompleteTextField (1.5)
   - TPKeyboardAvoiding (1.3)
   - UITextView+PlaceholderExt (0.1.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Canape
+  - KIImagePager (~> 2.1)
+  - MLPAutoCompleteTextField (~> 1.5)
   - TPKeyboardAvoiding (~> 1.3)
   - UITextView+PlaceholderExt
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Canape: a0c5199420dc27a3dd03a3105786924e5e691419
+  Canape: 2c63c9192e5b65704c3ee15d9211ca8cfb1c0b19
+  KIImagePager: 3294254e5e3f76c62edc8bd89da4d0b5ed010b19
+  MLPAutoCompleteTextField: ba4d507bbff2bd4f139d4197814fc8dd39caf77e
   TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
   UITextView+PlaceholderExt: 13b813e9bceb7615704e23838d1265e60fe00f01
 

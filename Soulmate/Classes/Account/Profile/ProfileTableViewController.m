@@ -116,13 +116,16 @@
           @"title" : NSLocalizedString(@"account.profile.last.school.title", nil)},
         @{@"type" : CELL_TYPE_TEXT_FIELD,
           @"name" : @"university",
-          @"title" : NSLocalizedString(@"account.profile.university.title", nil)},
+          @"title" : NSLocalizedString(@"account.profile.university.title", nil),
+          @"autoComplete" : @"Y"},
         @{@"type" : CELL_TYPE_TEXT_FIELD,
           @"name" : @"graduate",
-          @"title" : NSLocalizedString(@"account.profile.graduate.school.title", nil)},
+          @"title" : NSLocalizedString(@"account.profile.graduate.school.title", nil),
+          @"autoComplete" : @"Y"},
         @{@"type" : CELL_TYPE_TEXT_FIELD,
           @"name" : @"companyName",
-          @"title" : NSLocalizedString(@"account.profile.company.name.title", nil)},
+          @"title" : NSLocalizedString(@"account.profile.company.name.title", nil),
+          @"autoComplete" : @"Y"},
         @{@"type" : CELL_TYPE_COMBO,
           @"name" : @"job",
           @"title" : NSLocalizedString(@"account.profile.job.title", nil)},
@@ -387,10 +390,12 @@
         NSString *type = [_tableData objectAtIndex:selectedIndexPath.row][@"name"];
         NSNumber *limit = [_tableData objectAtIndex:selectedIndexPath.row][@"limit"];
         NSString *title = [_tableData objectAtIndex:selectedIndexPath.row][@"title"];
+        BOOL autoCompleteEnable = [@"Y" isEqualToString:[_tableData objectAtIndex:selectedIndexPath.row][@"autoComplete"]] ? YES: NO;
         
         ProfileTextDetailViewController *dest = segue.destinationViewController;
         [dest setProfile:_profile];
         [dest setTitle:title];
+        [dest setAutoCompleteEnable:autoCompleteEnable];
         if (limit != nil) {
             [dest setLimitBytes:[limit intValue]];
         }

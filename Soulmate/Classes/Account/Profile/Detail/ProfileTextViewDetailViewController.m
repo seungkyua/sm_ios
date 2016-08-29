@@ -64,7 +64,7 @@
 
 - (void) setTextLimit {
     NSString *t = @"";
-    t = [NSString stringWithFormat:@"%ld / %ld bytes", [_textView.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding], (long)self.limitBytes];
+    t = [NSString stringWithFormat:@"%ld / %ld bytes", (unsigned long)[_textView.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding], (long)self.limitBytes];
     [_labelLimit setText:t];
 }
 

@@ -69,9 +69,9 @@
     _graduateSchoolName = profileData[@"graudate_school_name"];
     _job = profileData[@"job"];
     _income = profileData[@"income"];
-    _instagramYn = profileData[@"instagram_fl"];
-    _facebookYn = profileData[@"facebook_fl"];
-    _telCertiYn = profileData[@"tel_certi_fl"];
+    _instagramYn = [profileData[@"instagram_fl"] isEqualToString:@"Y"] ? YES : NO;
+    _facebookYn = [profileData[@"facebook_fl"] isEqualToString:@"Y"] ? YES : NO;
+    _telCertiYn = [profileData[@"tel_certi_fl"] isEqualToString:@"Y"] ? YES : NO;
     
     _matchingInterest = profileData[@"matching_interest"];
     _matchingDate = profileData[@"matching_date"];

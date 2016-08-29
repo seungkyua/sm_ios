@@ -33,6 +33,12 @@
     _group.isMultiSelectionEnable = YES;
     [_group addButton:_btnAutoLogin];
     
+    [_textUserId setText:@"test@test.com"];
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [_textUserId becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

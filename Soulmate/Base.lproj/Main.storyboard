@@ -936,7 +936,7 @@
                         <viewControllerLayoutGuide type="top" id="d0T-lr-ILn"/>
                         <viewControllerLayoutGuide type="bottom" id="5np-KO-dpG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="adI-hY-6SN">
+                    <view key="view" contentMode="scaleToFill" id="adI-hY-6SN" customClass="TPKeyboardAvoidingScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -954,7 +954,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXz-Ad-tzj">
                                 <rect key="frame" x="32" y="274" width="311" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obT-GO-y9F">
                                 <rect key="frame" x="32" y="320" width="311" height="30"/>

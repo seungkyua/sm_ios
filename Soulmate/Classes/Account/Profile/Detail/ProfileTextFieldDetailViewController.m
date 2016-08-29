@@ -7,8 +7,15 @@
 //
 
 #import "ProfileTextFieldDetailViewController.h"
+#import <Canape/Canape.h>
 
-@interface ProfileTextFieldDetailViewController () <UITextFieldDelegate>
+#define DEFAULT_HEIGHT 200
+
+@interface ProfileTextFieldDetailViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *autoCompleteData;
+@property (nonatomic, strong) NSMutableArray *searchData;
 
 @end
 
@@ -54,6 +61,26 @@
         [self setTextLimit];
         [_labelLimit setHidden:NO];
     }
+    
+    if (self.autoCompleteEnable) {
+        _autoCompleteData = [[NSMutableArray alloc] initWithArray:@[@"abc", @"bcd", @"apple", @"홍익대", @"강남대", @"서울대", @"연세대", @"고려대", @"용인대", @"이화여대", @"성신여대", @"중앙대", @"개불대"]];
+        
+        if (_tableView == nil) {
+            CGRect rect = CGRectMake(0, _textField.frame.origin.y + _textField.frame.size.height, self.view.frame.size.width, DEFAULT_HEIGHT);
+            _tableView = [[UITableView alloc]initWithFrame:rect];
+            [_tableView setDelegate:self];
+            [_tableView setDataSource:self];
+            [self.view addSubview:_tableView];
+            
+            [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"autoCompleteCell"];
+        }
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    }
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /*
@@ -76,7 +103,8 @@
 
 - (void) setTextLimit {
     NSString *t = @"";
-    t = [NSString stringWithFormat:@"%ld / %ld bytes", [_textField.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding], (long)self.limitBytes];
+    NSUInteger bytes = [_textField.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+    t = [NSString stringWithFormat:@"%lu / %ld bytes", (unsigned long)bytes, (long)self.limitBytes];
     [_labelLimit setText:t];
 }
 
@@ -85,6 +113,17 @@
 - (void)textFieldDidChange {
     [self highlightBtn];
     [self setTextLimit];
+    
+    if (self.autoCompleteEnable) {
+        _searchData = [NSMutableArray array];
+        for (NSString *data in _autoCompleteData) {
+            if ([data containsString:_textField.text]) {
+                [_searchData addObject:data];
+            }
+        }
+        
+        [_tableView reloadData];
+    }
 }
 
 
@@ -95,6 +134,37 @@
     } else {
         return YES;
     }
+}
+
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _searchData.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *CellIdentifier = @"autoCompleteCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    [cell.textLabel setText:[_searchData objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_textField setText:[_searchData objectAtIndex:indexPath.row]];
+    
+    _searchData = [NSMutableArray array];
+    [_tableView reloadData];
 }
 
 #pragma mark - Event Handler
@@ -114,4 +184,16 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    NSLog(@"%f", [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height);
+    
+    CGFloat h = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    CGRect rect = _tableView.frame;
+    rect.size.height = DEVICE_SIZE.height - rect.origin.y - h;
+    [_tableView setFrame:rect];
+    
+    [_tableView reloadData];
+}
+
 @end

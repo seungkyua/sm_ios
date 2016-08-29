@@ -14,5 +14,6 @@
 @property (nonatomic, strong) Profile *profile;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic) NSInteger limitBytes;
+@property (nonatomic) BOOL autoCompleteEnable;
 
 @end

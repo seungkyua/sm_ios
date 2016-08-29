@@ -30,4 +30,13 @@
     
 + (id) findRowByData:(NSString *) data InArray:(NSMutableArray *) array;
 
+/**
+ * @brief 초성 검색
+ * @param combo : 이벤트 발생한 Combo 를 리턴
+ * @param text : 화면에 표시되는 값
+ * @param data : data
+ * @return nil
+ */
++ (BOOL)matchString:(NSString *)compareString searchString:(NSString *)searchString;
+
 @end

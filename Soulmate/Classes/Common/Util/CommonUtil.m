@@ -8,6 +8,11 @@
 
 #import "CommonUtil.h"
 
+#define chosungArray @[@"ㄱ",@"ㄲ",@"ㄴ",@"ㄷ",@"ㄸ",@"ㄹ",@"ㅁ",@"ㅂ",@"ㅃ",@"ㅅ",@"ㅆ",@"ㅇ",@"ㅈ",@"ㅉ",@"ㅊ",@"ㅋ",@"ㅌ",@"ㅍ",@"ㅎ"]
+#define HANGUL_BEGIN_UNICODE 44032  // 가
+#define HANGUL_END_UNICODE 55203    // 힣
+#define HANGUL_BASE_UNIT 588        // 각 자음 마다 가지는 글자수
+
 @implementation CommonUtil
 
 
@@ -150,6 +155,72 @@
     }
     
     return nil;
+}
+
++ (BOOL)matchString:(NSString *)compareString searchString:(NSString *)searchString {
+    compareString = [compareString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    searchString = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    int t = 0;
+    NSInteger seof = compareString.length - searchString.length;
+    NSInteger slen = searchString.length;
+    
+    if (seof < 0 || slen == 0) {
+        // 검색어가 더 길거나 검색어가 없으면 리턴
+        return NO;
+    }
+    
+    for (int i = 0; i <= seof; i++) {
+        t = 0;
+        while (t < slen) {
+            NSInteger code = [searchString characterAtIndex:t];
+            // 현재 char이 초성이고 compareString이 한글이면
+            if ([self isChosung:code] && [self isHangul:[compareString characterAtIndex:i + t]]) {
+                // 각각의 초성끼리 같은지 비교한다.
+                if ([self getChosung:[compareString characterAtIndex:i + t]] == [searchString characterAtIndex:t]) {
+                    t++;
+                } else {
+                    break;
+                }
+            } else {
+                // 초성이 아닐 때는 그냥 같은지 비교
+                if ([compareString characterAtIndex:i + t] == [searchString characterAtIndex:t]) {
+                    t++;
+                } else {
+                    break;
+                }
+            }
+        }
+        
+        if (t == slen) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+// 해당 문자가 초성인지 체크
++ (BOOL) isChosung:(NSInteger)code {
+    for (NSString *chosung in chosungArray) {
+        if (code == [chosung characterAtIndex:0]) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+// 해당 문자의 초성을 리턴
++ (NSInteger) getChosung:(NSInteger)code {
+    NSInteger hanBegin = (code - HANGUL_BEGIN_UNICODE);
+    NSInteger index = hanBegin / HANGUL_BASE_UNIT;
+    return [[chosungArray objectAtIndex:index] characterAtIndex:0];
+}
+
+// 해당 문자가 한글인지 체크
++ (BOOL) isHangul:(NSInteger)code {
+    return HANGUL_BEGIN_UNICODE <= code && code <= HANGUL_END_UNICODE;
 }
 
 @end

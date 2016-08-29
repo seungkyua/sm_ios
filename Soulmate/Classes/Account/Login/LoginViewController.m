@@ -34,10 +34,11 @@
     [_group addButton:_btnAutoLogin];
     
     [_textUserId setText:@"test@test.com"];
-    
 }
 
-- (void) viewWillAppear:(BOOL)animated {
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     [_textUserId becomeFirstResponder];
 }
 

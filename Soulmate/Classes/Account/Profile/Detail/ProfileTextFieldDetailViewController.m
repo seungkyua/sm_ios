@@ -8,6 +8,7 @@
 
 #import "ProfileTextFieldDetailViewController.h"
 #import <Canape/Canape.h>
+#import "CommonUtil.h"
 
 #define DEFAULT_HEIGHT 200
 
@@ -117,7 +118,8 @@
     if (self.autoCompleteEnable) {
         _searchData = [NSMutableArray array];
         for (NSString *data in _autoCompleteData) {
-            if ([data containsString:_textField.text]) {
+            if ([CommonUtil matchString:data searchString:_textField.text]) {
+// e           if ([data containsString:_textField.text]) {
                 [_searchData addObject:data];
             }
         }

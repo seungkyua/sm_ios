@@ -21,9 +21,15 @@
     _imagePager.dataSource = self;
     _imagePager.delegate = self;
     
-    _imagePager.pageControl.currentPageIndicatorTintColor = [UIColor lightGrayColor];
-    _imagePager.pageControl.pageIndicatorTintColor = [UIColor blackColor];
+    
 //    _imagePager.pageControl.center = CGPointMake(CGRectGetWidth(_imagePager.frame) / 2, CGRectGetHeight(_imagePager.frame) - 42);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    _imagePager.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    _imagePager.pageControl.pageIndicatorTintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// 이미지 세팅
 - (NSArray *) arrayWithImages:(KIImagePager*)pager
 {
     return @[[UIImage imageNamed:@"defaultFace"],

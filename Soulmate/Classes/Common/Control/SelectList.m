@@ -98,6 +98,8 @@
     [CPHelper closePopupView:self withType:POPUP_TYPE_CENTER];
 }
 
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }

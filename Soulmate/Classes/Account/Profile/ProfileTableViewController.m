@@ -1,5 +1,5 @@
 //
-//  HomeTableViewController.m
+//  ProfileTableViewController.m
 //  Soulmate
 //
 //  Created by HWANGIN YONG on 2016. 8. 2..
@@ -209,6 +209,8 @@
 //                                                          NSLocalizedString(@"account.profile.face.actionsheet.title3", nil)]
 //                                      cancelButtonTitle:nil delegate:self];
     
+    // 각 데이터 세팅
+    
     _sexData = [CommonUtil JsonStringToArray:NSLocalizedString(@"account.profile.sex.data", nil)];
     
     _ageData = [NSMutableArray array];
@@ -283,7 +285,7 @@
         cell = imageViewCell;
     } else if ([CELL_TYPE_TEXT_VIEW isEqualToString:type]) {
         ProfileTableViewTextViewCell *textViewCell = [tableView dequeueReusableCellWithIdentifier:@"textViewCell" forIndexPath:indexPath];
-        textViewCell.textView.textViewDelegate = self;
+//        textViewCell.textView.textViewDelegate = self;
         [textViewCell.textView setScrollEnabled:NO];
         [textViewCell.textView setText:_profile.selfDesc];
         cell = textViewCell;

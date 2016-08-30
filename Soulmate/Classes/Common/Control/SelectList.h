@@ -5,6 +5,8 @@
 //  Created by HWANGIN YONG on 2016. 8. 23..
 //  Copyright © 2016년 bliex. All rights reserved.
 //
+//  Combo2에서 팝업되는 셀렉트 리스트
+//
 
 #import <UIKit/UIKit.h>
 #import <Canape/Canape.h>
@@ -44,7 +46,17 @@
 @property (nonatomic) NSInteger selectedIndex;
 @property (nonatomic, strong) UITableView *tableView;
 
+/**
+ * @brief 현재 선택된 데이터 목록 가져오기 
+ * @return NSMutableArray
+ */
 - (NSMutableArray *) getSelectedDatas;
+
+/**
+ * @brief data 로 테이블 선택하기
+ * @param datas : datas
+ * @return nil
+ */
 - (void) setSelectedWithDatas:(NSMutableArray *) datas;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  HomeTableViewSubTitleCellTableViewCell.m
+//  ProfileTableViewSubTitleCellTableViewCell.m
 //  Soulmate
 //
 //  Created by HWANGIN YONG on 2016. 8. 2..

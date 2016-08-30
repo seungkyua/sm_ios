@@ -5,6 +5,8 @@
 //  Created by HWANGIN YONG on 2016. 8. 25..
 //  Copyright © 2016년 bliex. All rights reserved.
 //
+//  Gruide ViewController
+//
 
 #import "BaseMainViewController.h"
 #import <KIImagePager/KIImagePager.h>

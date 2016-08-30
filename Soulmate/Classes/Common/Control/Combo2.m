@@ -91,6 +91,8 @@
     [_selectList setHidden:YES];
 }
 
+#pragma mark - SelectListDelegate
+
 - (void) selectList:(SelectList *)selectList text:(NSString *)text data:(NSString *)data {
     [self setValue:text];
     [self setSelectedData:data];

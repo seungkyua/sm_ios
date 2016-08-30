@@ -8,7 +8,7 @@
 
 #import "CommonUtil.h"
 
-#define chosungArray @[@"ㄱ",@"ㄲ",@"ㄴ",@"ㄷ",@"ㄸ",@"ㄹ",@"ㅁ",@"ㅂ",@"ㅃ",@"ㅅ",@"ㅆ",@"ㅇ",@"ㅈ",@"ㅉ",@"ㅊ",@"ㅋ",@"ㅌ",@"ㅍ",@"ㅎ"]
+#define CHOSUNG_ARRAY @[@"ㄱ",@"ㄲ",@"ㄴ",@"ㄷ",@"ㄸ",@"ㄹ",@"ㅁ",@"ㅂ",@"ㅃ",@"ㅅ",@"ㅆ",@"ㅇ",@"ㅈ",@"ㅉ",@"ㅊ",@"ㅋ",@"ㅌ",@"ㅍ",@"ㅎ"]
 #define HANGUL_BEGIN_UNICODE 44032  // 가
 #define HANGUL_END_UNICODE 55203    // 힣
 #define HANGUL_BASE_UNIT 588        // 각 자음 마다 가지는 글자수
@@ -202,7 +202,7 @@
 
 // 해당 문자가 초성인지 체크
 + (BOOL) isChosung:(NSInteger)code {
-    for (NSString *chosung in chosungArray) {
+    for (NSString *chosung in CHOSUNG_ARRAY) {
         if (code == [chosung characterAtIndex:0]) {
             return YES;
         }
@@ -215,7 +215,7 @@
 + (NSInteger) getChosung:(NSInteger)code {
     NSInteger hanBegin = (code - HANGUL_BEGIN_UNICODE);
     NSInteger index = hanBegin / HANGUL_BASE_UNIT;
-    return [[chosungArray objectAtIndex:index] characterAtIndex:0];
+    return [[CHOSUNG_ARRAY objectAtIndex:index] characterAtIndex:0];
 }
 
 // 해당 문자가 한글인지 체크

@@ -5,6 +5,8 @@
 //  Created by HWANGIN YONG on 2016. 8. 1..
 //  Copyright © 2016년 bliex. All rights reserved.
 //
+//  Profile Model
+//
 
 #import <UIKit/UIKit.h>
 

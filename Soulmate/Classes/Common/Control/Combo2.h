@@ -5,6 +5,10 @@
 //  Created by HWANGIN YONG on 2016. 7. 27..
 //  Copyright © 2016년 bliex. All rights reserved.
 //
+//  선택 리스트가 화면 중앙에 뜨는 콤보
+//  데이터를 data, text 으로 구분지어 디스플레이 되는 문자열과 실제 값을 다르게 넣을 수 있다.
+//  다중 선택 가능.
+//
 
 #import "CPComboBase.h"
 

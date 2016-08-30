@@ -5,6 +5,8 @@
 //  Created by HWANGIN YONG on 2016. 7. 29..
 //  Copyright © 2016년 bliex. All rights reserved.
 //
+//  문자열에 따라 자동으로 높이가 변하는 TextView
+//
 
 #import <UIKit/UIKit.h>
 
@@ -23,7 +25,7 @@
 
 @end
 
-@interface AutoResizeTextView : UITextView
+@interface AutoResizeTextView : UITextView <UITextViewDelegate>
 
 @property (nonatomic) id <AutoResizeTextViewDelegate> textViewDelegate;
 

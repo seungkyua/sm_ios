@@ -5,6 +5,11 @@
 //  Created by HWANGIN YONG on 2016. 7. 27..
 //  Copyright © 2016년 bliex. All rights reserved.
 //
+//  셀렉트 리스트가 화면 하단에 뜨는 콤보.
+//  다중 컬럼 가능.
+//  데이터는 디스플레이 문자열의 배열로만 받도록 되어 있음.
+//  comboType에 따라 날짜 선택 콤보 가능.
+//
 
 #import "CPComboBase.h"
 
